@@ -1,0 +1,2661 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iPhone 18 - Tổng hợp & Thông số & Dàn ý</title>
+
+<style>
+  :root {
+    --primary: #0071e3;
+    --primary-dark: #005bb5;
+    --bg: #fbfbfd;
+    --surface: white;
+    --text: #1d1d1f;
+    --muted: #6e6e73;
+    --border: #d2d2d7;
+    --highlight: #e8f4fd;
+    --green: #34c759;
+    --orange: #ff9500;
+    --yellow: #ffeb3b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px 40px;
+    line-height: 1.65;
+    color: var(--text);
+    background: var(--bg);
+  }
+  h1 {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 12px;
+    margin-top: 0;
+    font-size: 1.9em;
+  }
+  h2 {
+    color: var(--text);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 8px;
+    margin-top: 36px;
+    font-size: 1.5em;
+    scroll-margin-top: 100px;
+  }
+  h3 { color: #424245; margin-top: 28px; font-size: 1.2em; }
+  h4 { color: var(--muted); margin-top: 22px; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 18px 0;
+    font-size: 0.92em;
+    background: var(--surface);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: var(--primary); color: white; font-weight: 600; }
+  tr:nth-child(even) td { background: #f5f5f7; }
+  tr:hover td { background: var(--highlight); }
+  blockquote {
+    border-left: 4px solid var(--primary);
+    background: #f5f5f7;
+    margin: 16px 0;
+    padding: 12px 20px;
+    color: #424245;
+    border-radius: 0 8px 8px 0;
+  }
+  code {
+    background: #f5f5f7; padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "SF Mono", Monaco, Consolas, monospace;
+    font-size: 0.9em;
+    color: #d63384;
+  }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul, ol { padding-left: 28px; }
+  li { margin: 6px 0; }
+  strong { color: var(--text); }
+  hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+  .toolbar {
+    position: sticky; top: 0;
+    background: linear-gradient(135deg, var(--primary), #5e5ce6);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 0 0 14px 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 16px rgba(0,113,227,0.25);
+    z-index: 100;
+    display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+  }
+  .toolbar .group { display: flex; gap: 6px; align-items: center; }
+  .toolbar .group + .group { border-left: 1px solid rgba(255,255,255,0.3); padding-left: 12px; }
+  .toolbar .nav-link {
+    color: white; margin-right: 6px; font-weight: 500;
+    padding: 4px 10px; border-radius: 6px; transition: background 0.2s;
+  }
+  .toolbar .nav-link:hover { background: rgba(255,255,255,0.18); text-decoration: none; }
+  .toolbar .label { font-weight: 600; opacity: 0.9; margin-right: 4px; }
+
+  /* Search */
+  .search-box {
+    display: flex; align-items: center;
+    background: white; border-radius: 10px;
+    padding: 4px 4px 4px 14px;
+    min-width: 320px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  }
+  .search-box input {
+    border: none; outline: none;
+    font-size: 0.95em; flex: 1;
+    padding: 6px 6px;
+    font-family: inherit;
+    color: var(--text);
+    background: transparent;
+  }
+  .search-box input::placeholder { color: #999; }
+  .btn {
+    background: white; color: var(--primary);
+    border: none; padding: 8px 14px; border-radius: 8px;
+    cursor: pointer; font-weight: 600; font-size: 0.9em;
+    transition: all 0.2s; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .btn:hover { background: #f0f0f0; transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+  .btn.active { background: var(--green); color: white; }
+  .btn.green { background: var(--green); color: white; }
+  .btn.green:hover { background: #2da548; }
+  .btn.primary-dark { background: var(--primary-dark); color: white; }
+  .btn.primary-dark:hover { background: #004a99; }
+  .btn.icon-only { padding: 6px 10px; }
+
+  /* Search results panel */
+  .search-results {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    padding: 22px;
+    margin-bottom: 28px;
+    display: none;
+    border: 2px solid var(--primary);
+  }
+  .search-results.show { display: block; }
+  .search-results-header {
+    display: flex; justify-content: space-between;
+    align-items: center; margin-bottom: 14px;
+    border-bottom: 1px solid var(--border); padding-bottom: 10px;
+  }
+  .search-results-header h3 {
+    margin: 0; color: var(--primary); font-size: 1.15em;
+  }
+  .search-results-count {
+    background: var(--primary); color: white;
+    padding: 3px 10px; border-radius: 12px;
+    font-size: 0.85em; font-weight: 600;
+    margin-left: 8px;
+  }
+  .results-table { margin: 0; }
+  .results-table th { background: #5e5ce6; }
+  .results-table .col-link { width: 22%; }
+  .results-table .col-content { width: 52%; }
+  .results-table .col-date { width: 14%; }
+  .results-table .col-section { width: 12%; }
+  .results-table td a { word-break: break-all; }
+  mark.search-hit {
+    background: var(--yellow);
+    color: var(--text);
+    padding: 1px 2px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+  .no-results {
+    padding: 24px; text-align: center;
+    color: var(--muted); font-style: italic;
+  }
+  .search-tag {
+    display: inline-block;
+    background: #f0f0f0;
+    color: var(--primary);
+    padding: 2px 8px;
+    margin: 0 4px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    cursor: pointer;
+  }
+  .search-tag:hover { background: var(--primary); color: white; }
+  .search-suggestions {
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+
+  /* Edit mode */
+  body.editing td:not(:first-child),
+  body.editing th:not(:first-child) {
+    background: #fffaf0 !important; outline: 1px dashed var(--orange);
+  }
+  body.editing td:focus, body.editing th:focus,
+  body.editing p:focus, body.editing li:focus,
+  body.editing h1:focus, body.editing h2:focus, body.editing h3:focus, body.editing h4:focus {
+    outline: 2px solid var(--primary); background: #fff !important;
+  }
+  body.editing .nav-link { pointer-events: none; opacity: 0.5; }
+
+  .save-status {
+    position: fixed; bottom: 20px; right: 20px;
+    background: var(--green); color: white;
+    padding: 10px 18px; border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0; transition: opacity 0.3s;
+    z-index: 200; font-weight: 600;
+    max-width: 90%;
+  }
+  .save-status.show { opacity: 1; }
+  .save-status.error { background: #ff3b30; }
+
+  @media (max-width: 768px) {
+    body { padding: 0 12px 20px; }
+    table { font-size: 0.85em; }
+    th, td { padding: 6px 8px; }
+    .toolbar { padding: 10px 12px; flex-direction: column; align-items: stretch; }
+    .toolbar .group { justify-content: center; flex-wrap: wrap; }
+    .toolbar .group + .group { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 10px; }
+    .search-box { min-width: auto; width: 100%; }
+  }
+  @media print { .toolbar, .save-status, .search-results { display: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="group">
+    <span class="label">Mục:</span>
+    <a href="#i-tong-hop-thong-tin" class="nav-link">I. Tổng hợp</a>
+    <a href="#ii-thong-so-ky-thuat-iphone-18-series" class="nav-link">II. Thông số</a>
+    <a href="#iii-dan-y-iphone-18-khi-nao-ra-mat" class="nav-link">III. Dàn ý</a>
+  </div>
+  <div class="group" style="flex: 1; min-width: 280px;">
+    <div class="search-box" style="flex: 1;">
+      <span style="font-size: 1.1em;">🔍</span>
+      <input id="searchInput" type="text" placeholder="Tìm kiếm trong tài liệu (vd: màu, pin, camera, 5G...)" />
+      <button class="btn icon-only" onclick="clearSearch()" id="btnClear" style="display:none;" title="Xoá tìm kiếm">✕</button>
+      <button class="btn primary-dark" onclick="runSearch()">Tìm</button>
+    </div>
+  </div>
+  <div class="group">
+    <button id="btnEdit" class="btn" onclick="toggleEdit()">✏️ Chỉnh sửa</button>
+    <button id="btnSave" class="btn green" onclick="saveChanges()" style="display:none;">💾 Lưu</button>
+  </div>
+</div>
+
+<div id="searchResults" class="search-results">
+  <div class="search-results-header">
+    <div>
+      <h3>Kết quả tìm kiếm cho <span id="searchQueryDisplay"></span></h3>
+      <div class="search-suggestions" id="searchInfo"></div>
+    </div>
+    <span class="search-results-count" id="searchCount">0</span>
+  </div>
+  <div id="searchResultsBody"></div>
+</div>
+
+<div id="content">
+<h1 id="iphone-18-tong-hop-thong-tin-thong-so-ky-thuat-dan-y">IPHONE 18 - TỔNG HỢP THÔNG TIN, THÔNG SỐ KỸ THUẬT &amp; DÀN Ý</h1>
+<blockquote>
+<p><strong>Ngày tạo file:</strong> 09/05/2026<br />
+<strong>Phạm vi:</strong> iPhone 18 Series (bao gồm iPhone 18, iPhone 18e, iPhone 18 Pro, iPhone 18 Pro Max, iPhone Air 2 và iPhone Fold)<br />
+<strong>Lưu ý quan trọng:</strong> Tính đến 09/05/2026, Apple chưa chính thức công bố dòng iPhone 18. Mọi thông số bên dưới đều là <strong>dự đoán dựa trên các nguồn tin tức/leak</strong>. File này được cập nhật định kỳ hàng ngày để bổ sung các thông tin mới nhất.</p>
+</blockquote>
+<hr />
+<h2 id="i-tong-hop-thong-tin" data-section="i-tong-hop-thong-tin">I. TỔNG HỢP THÔNG TIN</h2>
+<p>Bảng dưới đây tổng hợp các bài viết liên quan đến iPhone 18 từ các nguồn website và kênh social được chỉ định. Mục này sẽ được cập nhật định kỳ hàng ngày.</p>
+<table>
+<thead>
+<tr>
+<th>STT</th>
+<th>Tên nguồn</th>
+<th>Link nguồn</th>
+<th>Nội dung tóm tắt</th>
+<th>Ngày cập nhật</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/roundup/iphone-18-pro/</td>
+<td>Trang roundup tổng hợp toàn bộ thông tin về iPhone 18 Pro &amp; Pro Max: ra mắt 9/2026, chip A20 (TSMC 2nm), Dynamic Island nhỏ hơn 35%, màn LTPO+ từ Samsung &amp; LG, camera variable aperture, modem C2, hỗ trợ 5G qua vệ tinh, pin 5.100-5.200 mAh (Pro Max), khung nhôm anodized, 4 màu (Light Blue, Dark Cherry, Dark Gray, Silver).</td>
+<td>08/05/2026</td>
+</tr>
+<tr>
+<td>2</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/roundup/iphone-18/</td>
+<td>Roundup iPhone 18 (bản tiêu chuẩn) &amp; iPhone 18e: ra mắt mùa xuân 2027, chip A20 (2nm), RAM 12GB tất cả model, camera selfie 24MP (nâng cấp từ 18MP), Dynamic Island nhỏ hơn, không có thay đổi thiết kế lớn so với iPhone 17.</td>
+<td>09/04/2026</td>
+</tr>
+<tr>
+<td>3</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/2026/05/07/when-is-the-iphone-18-coming-out/</td>
+<td>Lịch ra mắt: Pro &amp; Pro Max + iPhone Fold ra mắt tháng 9/2026; iPhone 18 tiêu chuẩn, iPhone 18e, iPhone Air 2 ra mắt mùa xuân 2027 (khoảng tháng 3). Apple chuyển sang chiến lược "split-launch annual cycle".</td>
+<td>07/05/2026</td>
+</tr>
+<tr>
+<td>4</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/2026/05/05/iphone-18-downgrades-rumored-yet-again/</td>
+<td>Theo leaker "Fixed Focus Digital", iPhone 18 tiêu chuẩn sẽ bị "downgrade" - linh kiện dùng chung với iPhone 18e, màn hình giảm thông số, chip có thể bị giảm hiệu năng và đổi tên để che đi việc cắt giảm.</td>
+<td>05/05/2026</td>
+</tr>
+<tr>
+<td>5</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/2026/04/20/iphone-18-pro-list-of-10-new-features/</td>
+<td>10 tính năng mới của iPhone 18 Pro: màu Dark Cherry mới, Dynamic Island nhỏ hơn (đèn flood Face ID đưa xuống dưới màn), màn LTPO+, camera 48MP variable aperture, chip A20 Pro 2nm, modem C2, 5G qua vệ tinh, chip mạng N2, Camera Control đơn giản hóa (chỉ cảm ứng lực), Ceramic Shield mặt sau redesign.</td>
+<td>20/04/2026</td>
+</tr>
+<tr>
+<td>6</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/2026/03/11/iphone-18-pro-max-thickness-weight-revealed/</td>
+<td>iPhone 18 Pro Max độ dày 8.8mm (tăng từ 8.75mm trên 17 Pro Max), trọng lượng vượt 240g - chiếc iPhone nặng nhất từ iPhone 14 Pro Max. Pin 5.100-5.200 mAh, leaker Ice Universe &amp; Instant Digital.</td>
+<td>11/03/2026</td>
+</tr>
+<tr>
+<td>7</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/2026/04/16/iphone-18-pro-variable-aperture-camera-production/</td>
+<td>Camera variable aperture của iPhone 18 Pro đã đi vào sản xuất. Sunny Optical sản xuất actuator, LG Innotek bắt đầu sản xuất khoảng tháng 6-7/2026.</td>
+<td>16/04/2026</td>
+</tr>
+<tr>
+<td>8</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/2025/11/07/iphone-18-lineup-24mp-selfie-cameras/</td>
+<td>Toàn bộ dòng iPhone 18 (gồm 18, 18 Pro, 18 Pro Max, Air 2, iPhone Fold) sẽ trang bị camera selfie 24MP (gấp đôi 12MP trước đây, lên từ 18MP).</td>
+<td>07/11/2025</td>
+</tr>
+<tr>
+<td>9</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/roundup/iphone-fold/</td>
+<td>Trang roundup iPhone Fold: ra mắt 9/2026, màn ngoài 5.49 inch (2.088×1.422), màn trong 7.76 inch (2.713×1.920), khung titan + nhôm, bản lề kim loại lỏng, Touch ID (không Face ID), camera kép 48MP, pin 5.400-5.800 mAh, mỏng 4.5mm khi mở, giá ~$2.000-$2.900.</td>
+<td>12/03/2026 (cập nhật 08/05/2026)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/2026/05/06/iphone-18-pro-ltpo-display-upgrade-samsung/</td>
+<td>Màn LTPO+ của iPhone 18 Pro do Samsung &amp; LG cung cấp. BOE bị loại khỏi chuỗi cung ứng cao cấp do vấn đề chất lượng. LTPO+ tiết kiệm điện hơn LTPO hiện tại.</td>
+<td>06/05/2026</td>
+</tr>
+<tr>
+<td>11</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/2026/01/19/iphone-18-pro-ram-amount-rumors/</td>
+<td>iPhone 18 Pro được đồn trang bị RAM 12GB.</td>
+<td>19/01/2026</td>
+</tr>
+<tr>
+<td>12</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/2025/10/25/iphone-18-to-feature-more-ram/</td>
+<td>iPhone 18 dự kiến tăng RAM 50% - tất cả model dùng 12GB RAM.</td>
+<td>25/10/2025</td>
+</tr>
+<tr>
+<td>13</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/2026/04/22/iphone-18-pro-4-part-camera-upgrade-plan/</td>
+<td>iPhone 18 Pro mở đầu kế hoạch nâng cấp camera 4 phần: variable aperture (2026), telephoto khẩu độ lớn hơn, sensor 3 lớp Samsung.</td>
+<td>22/04/2026</td>
+</tr>
+<tr>
+<td>14</td>
+<td>MacRumors</td>
+<td>https://www.macrumors.com/2026/04/08/iphone-air-2-and-iphone-18e-early-next-year/</td>
+<td>iPhone Air 2 và iPhone 18e xác nhận ra mắt đầu năm 2027. Apple đang cân nhắc thêm camera thứ 2 cho iPhone Air 2 để tăng sức hút.</td>
+<td>08/04/2026</td>
+</tr>
+<tr>
+<td>15</td>
+<td>PhoneArena</td>
+<td>https://www.phonearena.com/phones/Apple-iPhone-18_id12879</td>
+<td>Trang spec rumor iPhone 18 tiêu chuẩn: màn 6.27 inch 120Hz LTPO, chip A20, RAM 12GB. Có nguồn cho rằng giữ nguyên 6.3 inch OLED Super Retina XDR.</td>
+<td>09/05/2026</td>
+</tr>
+<tr>
+<td>16</td>
+<td>PhoneArena</td>
+<td>https://www.phonearena.com/phones/Apple-iPhone-18-Pro_id12884</td>
+<td>Trang spec rumor iPhone 18 Pro: 6.3 inch LTPO+, A20 Pro, 12GB RAM, camera 200MP main + 48MP telephoto + 48MP ultra-wide + 18-24MP selfie.</td>
+<td>09/05/2026</td>
+</tr>
+<tr>
+<td>17</td>
+<td>PhoneArena</td>
+<td>https://www.phonearena.com/phones/Apple-iPhone-18-Pro-Max_id12880</td>
+<td>Trang spec rumor iPhone 18 Pro Max: 6.9 inch LTPO+, A20 Pro 2nm, pin 5.100-5.200 mAh, camera variable aperture, Dynamic Island thu nhỏ, modem C2, có thể giữ giá $1.199.</td>
+<td>09/05/2026</td>
+</tr>
+<tr>
+<td>18</td>
+<td>PhoneArena</td>
+<td>https://www.phonearena.com/phones/Apple-iPhone-18e_id12950</td>
+<td>Spec rumor iPhone 18e: màn 6.1 inch, ra mắt mùa xuân 2027, chip A20 hoặc biến thể A20 cắt lõi GPU.</td>
+<td>09/05/2026</td>
+</tr>
+<tr>
+<td>19</td>
+<td>PhoneArena</td>
+<td>https://www.phonearena.com/news/iphone-18-and-iphone-air-2-display-specs-leak-proving-exciting-rumors-true_id177305</td>
+<td>Leak thông số màn iPhone 18 và iPhone Air 2: tăng độ sáng, cải tiến panel. iPhone 18 vẫn 6.3 inch nhưng panel đời cũ hơn 17.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>20</td>
+<td>PhoneArena</td>
+<td>https://www.phonearena.com/news/iphone-18-release-date-get-ready-for-split-launch-across-2026-and-2027_id174759</td>
+<td>Lịch ra mắt chia làm 2 đợt: 9/2026 (Pro, Pro Max, Fold) và mùa xuân 2027 (18, 18e, Air 2).</td>
+<td>02/2026</td>
+</tr>
+<tr>
+<td>21</td>
+<td>PhoneArena</td>
+<td>https://www.phonearena.com/news/iphone-18-pro-leaks-continue-to-hint-at-apple-big-camera-shift_id178050</td>
+<td>Bằng chứng dồn dập về thay đổi camera của iPhone 18 Pro - variable aperture là "big shift" lớn nhất sau nhiều năm.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>22</td>
+<td>PhoneArena</td>
+<td>https://www.phonearena.com/iphone-18-pro-max-release-date-price-features-news</td>
+<td>Trang tổng hợp iPhone 18 Pro Max: dự kiến giá khởi điểm $1.199, ra mắt 9/2026, pin lớn nhất, Dark Cherry là màu đặc trưng năm.</td>
+<td>05/2026</td>
+</tr>
+<tr>
+<td>23</td>
+<td>PhoneArena</td>
+<td>https://www.phonearena.com/news/iphone-18-iphone-18e-specs-chip-memory_id179847</td>
+<td>Phân tích việc iPhone 18 bị "downgrade" có thể là tín hiệu tốt - Apple tập trung tài nguyên cho dòng Pro &amp; Fold.</td>
+<td>05/2026</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Tom's Guide</td>
+<td>https://www.tomsguide.com/phones/iphones/iphone-18-pro-rumors-everything-we-know-so-far</td>
+<td>Trang tổng hợp iPhone 18 Pro: khung nhôm, A20 Pro 2nm, 12GB RAM, variable aperture, Dynamic Island nhỏ hơn, mặt lưng Ceramic Shield mới.</td>
+<td>05/2026</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Tom's Guide</td>
+<td>https://www.tomsguide.com/phones/iphones/iphone-18-pro-max-rumors-and-leaks-everything-we-know-so-far</td>
+<td>Trang tổng hợp iPhone 18 Pro Max: 6.9 inch, dày 8.8mm, nặng &gt;240g, pin &gt;5.100 mAh, A20 Pro, modem C2, eSIM only ở nhiều thị trường.</td>
+<td>05/2026</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Tom's Guide</td>
+<td>https://www.tomsguide.com/phones/iphones/iphone-fold-specs-potentially-revealed-heres-how-it-would-stack-up-against-samsung-galaxy-z-fold-8</td>
+<td>iPhone Fold leak: màn 5.5"/7.8", Touch ID, 2 camera 48MP sau, selfie 18MP, A20, dày 4.5mm khi mở.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Tom's Guide</td>
+<td>https://www.tomsguide.com/phones/iphones/iphone-18-pro-could-be-the-first-iphone-to-get-a-variable-aperture-why-that-matters</td>
+<td>Phân tích ý nghĩa của variable aperture trên iPhone 18 Pro - cho phép kiểm soát độ sâu trường ảnh, cải thiện chụp đêm.</td>
+<td>03/2026</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Tom's Guide</td>
+<td>https://www.tomsguide.com/phones/iphones/iphone-18-pro-dynamic-island-mystery-solved-heres-what-to-expect</td>
+<td>Dynamic Island iPhone 18 Pro nhỏ hơn 35% (rộng ~13.5mm so với 20.7mm hiện tại) nhờ đưa flood illuminator xuống dưới màn.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Tom's Guide</td>
+<td>https://www.tomsguide.com/phones/iphones/iphone-18-pro-could-deal-with-the-ram-crisis-through-a-storage-hike-heres-why-i-think-thats-unlikely</td>
+<td>Phân tích khả năng iPhone 18 Pro tăng dung lượng base lên 512GB và thêm tùy chọn 2TB do khủng hoảng giá RAM.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Tom's Guide</td>
+<td>https://www.tomsguide.com/phones/iphones/delayed-iphone-18-could-get-a-ram-boost-and-a-more-powerful-chipset</td>
+<td>iPhone 18 tiêu chuẩn tuy bị delay nhưng có thể được tăng RAM 12GB và chip mạnh hơn để bù lại.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Tom's Guide</td>
+<td>https://www.tomsguide.com/phones/iphones/forget-the-iphone-18-apples-iphone-fold-is-finally-real-and-it-just-hit-a-huge-milestone</td>
+<td>iPhone Fold đã đến giai đoạn EVT (Engineering Validation Test) - dấu mốc quan trọng cho ra mắt 9/2026.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>32</td>
+<td>TechRadar</td>
+<td>https://www.techradar.com/phones/iphone/the-iphone-18-series-could-include-a-variable-aperture-significantly-enhancing-the-camera</td>
+<td>Variable aperture có thể nâng cấp đáng kể camera iPhone 18 series, đặc biệt trong điều kiện ánh sáng yếu.</td>
+<td>02/2026</td>
+</tr>
+<tr>
+<td>33</td>
+<td>TechRadar</td>
+<td>https://www.techradar.com/phones/iphone/apples-rumored-iphone-18-upgrade-will-put-the-same-amount-of-ram-in-all-four-models</td>
+<td>Tất cả 4 model iPhone 18 đều có RAM 12GB - sự đồng nhất hiếm thấy ở dòng iPhone.</td>
+<td>10/2025</td>
+</tr>
+<tr>
+<td>34</td>
+<td>TechRadar</td>
+<td>https://www.techradar.com/phones/iphone/a-new-iphone-roadmap-just-leaked-with-spec-details-of-the-foldable-iphone-and-the-iphone-air-2</td>
+<td>Roadmap mới: iPhone Air 2 có thể có camera kép (lần đầu tiên dòng Air có nhiều camera). iPhone Fold xác nhận ra 9/2026.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>35</td>
+<td>The Gadgeteer</td>
+<td>https://the-gadgeteer.com/2026/05/05/iphone-18-pro-max-battery-climbs-to-5200-mah-in-latest-leak/</td>
+<td>Cập nhật mới nhất: iPhone 18 Pro Max có pin 5.200 mAh - mức cao nhất leak được.</td>
+<td>05/05/2026</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Geeky Gadgets</td>
+<td>https://www.geeky-gadgets.com/iphone-18-pro-max-leaks-8/</td>
+<td>Tổng hợp leak iPhone 18 Pro Max: variable aperture cơ học, A20, Dynamic Island nhỏ hơn, ra 2026.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Geeky Gadgets</td>
+<td>https://www.geeky-gadgets.com/iphone-18-peformance-leap/</td>
+<td>A20 Pro có "Super Cores" và quy trình 2nm - nhanh 15%, tiết kiệm 30% so với A19.</td>
+<td>05/2026</td>
+</tr>
+<tr>
+<td>38</td>
+<td>iBTimes Australia</td>
+<td>https://www.ibtimes.com.au/iphone-18-pro-max-rumors-2nm-a20-chip-variable-aperture-camera-smaller-dynamic-island-2026-debut-1868221</td>
+<td>Tổng hợp rumor iPhone 18 Pro Max: A20 2nm, variable aperture, Dynamic Island nhỏ, debut 2026.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Stack Umbrella</td>
+<td>https://www.stackumbrella.com/technology/iphone-18-pro-leak-reveals-smaller-dynamic-island-bigger-battery-and-a20-pro-chip-upgrade-11810105</td>
+<td>iPhone 18 Pro: Dynamic Island nhỏ hơn, pin lớn hơn, A20 Pro.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Gulf News</td>
+<td>https://gulfnews.com/technology/iphone-18-pro-battery-just-got-leaked-apples-biggest-endurance-jump-yet-fans-are-losing-it-1.500492714</td>
+<td>iPhone 18 Pro: pin 5.100 mAh - bước nhảy về thời lượng sử dụng lớn nhất của Apple, có thể dùng 2 ngày.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Eastern Herald</td>
+<td>https://easternherald.com/2026/05/09/iphone-18-pro-a20-chip-2nm-leak/</td>
+<td>A20 chip với 2nm power leap và thay đổi thiết kế lớn cho iPhone 18 Pro.</td>
+<td>09/05/2026</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Croma Unboxed</td>
+<td>https://www.croma.com/unboxed/iphone-18-pro-pro-max-leaks-specs-features</td>
+<td>Tổng hợp leak iPhone 18 Pro &amp; Pro Max trên thị trường Ấn Độ.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Impressive Times</td>
+<td>https://impressivetimes.com/latest/iphone-18-pro-max-dark-cherry-leak-a20-chip-battery/</td>
+<td>iPhone 18 Pro Max: màu Dark Cherry, A20, pin lớn hơn, chi tiết giá.</td>
+<td>05/2026</td>
+</tr>
+<tr>
+<td>44</td>
+<td>YouTube - Front Page Tech</td>
+<td>https://www.youtube.com/channel/UC7vZJ3iwqo3a_FBfVbbUK_A</td>
+<td>Kênh Jon Prosser - leak rumor về thiết kế iPhone 18 Pro với Dark Cherry, Dynamic Island nhỏ hơn.</td>
+<td>04-05/2026</td>
+</tr>
+<tr>
+<td>45</td>
+<td>YouTube - Apple (kênh chính thức)</td>
+<td>https://www.youtube.com/channel/UCHf-gtq00N5T-gV2D1Vu61w</td>
+<td>Kênh chính thức của Apple - chưa có thông tin về iPhone 18 (sẽ có sau sự kiện 9/2026).</td>
+<td>-</td>
+</tr>
+<tr>
+<td>46</td>
+<td>YouTube - MKBHD</td>
+<td>https://www.youtube.com/channel/UCj34AOIMl_k1fF7hcBkD_dw</td>
+<td>Marques Brownlee bàn luận về các leak iPhone 18 Pro: variable aperture, A20, thiết kế.</td>
+<td>04-05/2026</td>
+</tr>
+<tr>
+<td>47</td>
+<td>YouTube - Technizo Concept</td>
+<td>https://www.youtube.com/c/Technizoconcept/videos</td>
+<td>Kênh chuyên render concept iPhone 18 Series dựa trên các leak: Dynamic Island nhỏ, Dark Cherry, mặt lưng frosted.</td>
+<td>04-05/2026</td>
+</tr>
+<tr>
+<td>48</td>
+<td>TikTok - @tttechnologyuk</td>
+<td>https://www.tiktok.com/@tttechnologyuk</td>
+<td>Video ngắn về leak iPhone 18 - tóm tắt thông số chính từ MacRumors, Bloomberg.</td>
+<td>04-05/2026</td>
+</tr>
+<tr>
+<td>49</td>
+<td>TikTok - @appleguy.ph</td>
+<td>https://www.tiktok.com/@appleguy.ph</td>
+<td>Video review concept iPhone 18 Pro Max màu Dark Cherry, phân tích thiết kế.</td>
+<td>04-05/2026</td>
+</tr>
+<tr>
+<td>50</td>
+<td>TikTok - @apple_news_blogger</td>
+<td>https://www.tiktok.com/@apple_news_blogger</td>
+<td>Cập nhật rumor iPhone 18 hằng tuần, tóm tắt từ các nguồn lớn.</td>
+<td>04-05/2026</td>
+</tr>
+<tr>
+<td>51</td>
+<td><strong>Forbes</strong> (David Phelan)</td>
+<td>https://www.forbes.com/sites/davidphelan/2026/02/23/apple-iphone-18-pro-may-see-highly-desirable-upgrade-report-says/</td>
+<td>"Apple iPhone 18 Pro May See Record-Breaking Power Upgrade" - Pin <strong>5.200 mAh</strong> (lớn nhất từ trước đến nay trên iPhone), chip A20 Pro 2nm, modem C2 hỗ trợ NR-NTN (5G qua vệ tinh). Iphone đã vào giai đoạn production testing.</td>
+<td>23/02/2026</td>
+</tr>
+<tr>
+<td>52</td>
+<td><strong>Forbes</strong> (David Phelan)</td>
+<td>https://www.forbes.com/sites/davidphelan/2026/03/04/apple-iphone-18-pro-new-leak-signals-unprecedented-design-change/</td>
+<td>"iPhone 18 Pro Design Changes Come Into Focus" - Bloomberg Mark Gurman tiết lộ Apple đang test màu Deep Red làm màu chủ đạo. Đây có thể là iPhone Pro đầu tiên có màu đỏ ngay từ ngày ra mắt.</td>
+<td>04/03/2026</td>
+</tr>
+<tr>
+<td>53</td>
+<td><strong>Forbes</strong> (David Phelan)</td>
+<td>https://www.forbes.com/sites/davidphelan/2026/03/08/apple-iphone-fold-may-have-unexpected-name-new-report-says/</td>
+<td>"Apple iPhone Fold May Have Unexpected Name" - Mark Gurman: tên có thể là <strong>"iPhone Ultra"</strong> trong chiến lược 'Ultra products' (cùng AirPods Ultra &amp; MacBook Pro touchscreen). Tên khác: iPhone Duo (ít khả năng).</td>
+<td>08/03/2026</td>
+</tr>
+<tr>
+<td>54</td>
+<td><strong>Forbes</strong> (David Phelan)</td>
+<td>https://www.forbes.com/sites/davidphelan/2026/03/31/apple-iphone-18-pro-latest-leak-signals-major-design-update/</td>
+<td>"Major Design Update" - Theo Ice Universe (Weibo): bezel giữ nguyên, <strong>Dynamic Island duy nhất nhỏ hơn</strong>. Khả năng đưa Face ID sensor xuống dưới màn để thu nhỏ cut-out.</td>
+<td>31/03/2026</td>
+</tr>
+<tr>
+<td>55</td>
+<td><strong>Forbes</strong> (David Phelan)</td>
+<td>https://www.forbes.com/sites/davidphelan/2026/04/04/iphone-18-pro-leak-apple-is-reportedly-killing-its-signature-finish/</td>
+<td>"Apple Killing Its Signature Finish" - <strong>Năm thứ 2 không có Pro màu đen</strong> (theo Instant Digital/Weibo). iPhone 14 Pro là Pro cuối cùng có Space Black. Cosmic Orange thành công khiến Apple tự tin bỏ đen.</td>
+<td>04/04/2026</td>
+</tr>
+<tr>
+<td>56</td>
+<td><strong>Forbes</strong> (David Phelan)</td>
+<td>https://www.forbes.com/sites/davidphelan/2026/04/08/apples-2026-shake-up-iphone-18-pro-leaks-while-iphone-fold-steals-the-show/</td>
+<td>"Apple's 2026 Shake-Up" - Tháng 9/2026 chỉ có 3 model: 18 Pro, Pro Max &amp; iPhone Fold. Cosmic Orange chắc chắn bị retire. iPhone Fold màn gấp = kích thước <strong>iPad mini</strong>. Có thể delay đến tháng 12.</td>
+<td>08/04/2026</td>
+</tr>
+<tr>
+<td>57</td>
+<td><strong>Forbes</strong> (David Phelan)</td>
+<td>https://www.forbes.com/sites/davidphelan/2026/04/16/apple-iphone-18-pro-latest-leak-signals-significant-design-change/</td>
+<td>"Significant Design Change" - Theo Digital Chat Station: Apple đang A/B test 2 thiết kế (giữ DI hiện tại HOẶC thu nhỏ với Face ID dưới màn). Camera variable aperture chính thức vào sản xuất qua Sunny Optical &amp; LG Innotek.</td>
+<td>16/04/2026</td>
+</tr>
+<tr>
+<td>58</td>
+<td><strong>Forbes</strong> (David Phelan)</td>
+<td>https://www.forbes.com/sites/davidphelan/2026/04/18/iphone-18-pro-report-four-new-colors-leaked-as-apple-cancels-popular-shade/</td>
+<td>"Four New Colors Leak" - Macworld: 4 màu là <strong>Dark Cherry</strong> (chủ đạo, "gần wine hơn fruit punch"), Light Blue, Dark Gray, Silver. Khoảng cách giữa kính cắt và bệ camera nhỏ hơn.</td>
+<td>18/04/2026</td>
+</tr>
+<tr>
+<td>59</td>
+<td><strong>Forbes</strong> (David Phelan)</td>
+<td>https://www.forbes.com/sites/davidphelan/2026/04/23/apple-iphone-18-pro-latest-leak-doubles-down-on-design-change-news/</td>
+<td>"Doubles Down On Design Update News" - Instant Digital: Dark Cherry là <strong>mix của burgundy + coffee + deep purple</strong>. Còn &lt;6 tháng đến launch 9/2026.</td>
+<td>23/04/2026</td>
+</tr>
+<tr>
+<td>60</td>
+<td><strong>Forbes</strong> (David Phelan)</td>
+<td>https://www.forbes.com/sites/davidphelan/2026/05/05/exactly-when-apple-will-launch-iphone-18-pro-and-iphone-18-pro-max/</td>
+<td>"Here's When Apple Will Launch iPhone 18 Pro" - <strong>Phân tích chi tiết ngày keynote</strong>: KHÔNG phải 8/9 (sau Labor Day), KHÔNG phải 11/9 (Apple kiêng), khả năng cao nhất là <strong>9/9/2026 (Wed)</strong>, hoặc 15-16/9. Mở bán &lt;2 tuần sau keynote.</td>
+<td>05/05/2026</td>
+</tr>
+<tr>
+<td>61</td>
+<td><strong>Forbes</strong> (David Phelan)</td>
+<td>https://www.forbes.com/sites/davidphelan/2026/05/07/heres-why-theres-no-iphone-18-this-year-new-report-claims/</td>
+<td>"Here's Why There's No iPhone 18 This Year" - Fixed Focus Digital giải thích: Apple cố ý delay iPhone 18 tiêu chuẩn để <strong>kéo dài chu kỳ market buzz iPhone 17</strong>, giảm production cost. Counterpoint 4/5: iPhone 17 là smartphone bán chạy nhất Q1 2026 (6% thị phần global).</td>
+<td>07/05/2026</td>
+</tr>
+<tr>
+<td>62</td>
+<td><strong>Forbes</strong> (Ewan Spence)</td>
+<td>https://www.forbes.com/sites/ewanspence/2026/04/17/apple-news-headlines-iphone-fold-launch-date-iphone-18-pro-specs-leak-ipad-air-oled/</td>
+<td>"Apple Loop: iPhone Fold Launch Dates, iPad Air Upgrade, iPhone 18 Pro Specs" - Tổng hợp tuần: 18 Pro lớn hơn (+3g từ pin lớn hơn), iPhone Fold chưa chắc theo lịch 10 ngày sau keynote.</td>
+<td>17/04/2026</td>
+</tr>
+<tr>
+<td>63</td>
+<td><strong>Forbes</strong> (Paul Monckton)</td>
+<td>https://www.forbes.com/sites/paulmonckton/2026/04/22/supply-chain-leaks-confirm-iphone-18-pro-will-fix-apples-biggest-camera-flaw/</td>
+<td>"Supply Chain Leaks Confirm Camera Upgrade" - Theo ETNews: variable aperture lens vào mass production. Sunny Optical làm actuator (motor điều khiển aperture blade), LG Innotek lắp ráp tại nhà máy Gumi (Hàn Quốc) tháng 6-7/2026. iPhone hiện tại dùng f/1.78 fixed; new sensor 1/1.28-inch.</td>
+<td>22/04/2026</td>
+</tr>
+<tr>
+<td>64</td>
+<td><strong>CNET</strong></td>
+<td>https://www.cnet.com/tech/mobile/iphone-18-heres-what-we-know-about-apples-next-flagship-phone/</td>
+<td>"iPhone 18: Here's What We Know" - 3 model fall 2026 (18 Pro, Pro Max, Fold) + 6 model tổng nếu tính 18e/Air 2/18 spring 2027. Màn 6.3"/6.9" giữ nguyên. Pro có lớp finish <strong>"subtle transparent"</strong> trên rear glass. <strong>3 màu mới: coffee, purple, burgundy</strong>.</td>
+<td>08/05/2026</td>
+</tr>
+<tr>
+<td>65</td>
+<td><strong>CNET</strong></td>
+<td>https://www.cnet.com/tech/iphone-18-reportedly-wont-launch-until-2027-because-of-foldable-iphone/</td>
+<td>"iPhone 18 Won't Launch Until 2027" - Theo ET News: bản tiêu chuẩn ra first half 2027. Chiến lược 2 launch events/năm. Apple Q2 2025 doanh số giảm 2%.</td>
+<td>18/08/2025</td>
+</tr>
+<tr>
+<td>66</td>
+<td><strong>CNET</strong></td>
+<td>https://www.cnet.com/tech/mobile/iphone-fold-and-iphone-air-2-launch-dates-prices-and-everything-we-know/</td>
+<td>"iPhone Fold Every Leak and Rumor" - Tên có thể là <strong>"iPhone Ultra"</strong> (Digital Chat Station). Thiết kế book-style wide &amp; squat. Màn <strong>gần như không có crease</strong> (UDN). IDC: doanh số foldable global tăng 19% nếu iPhone Fold ra 2026, Apple chiếm 24% market share.</td>
+<td>27/04/2026</td>
+</tr>
+<tr>
+<td>67</td>
+<td><strong>CNET</strong> (Patrick Holland)</td>
+<td>https://www.cnet.com/tech/mobile/i-for-one-would-welcome-a-brown-iphone-18-pro-but-on-one-condition/</td>
+<td>"Brown iPhone 18 Pro" - Phân tích từ Patrick Holland: 3 màu rumor là <strong>purple, burgundy, coffee</strong>. Mở rộng: nếu Apple áp dụng kỹ thuật Motorola Razr với hậu nhuộm anodized + Ceramic Glass tinted thì màu coffee có thể đẹp.</td>
+<td>06/11/2025</td>
+</tr>
+<tr>
+<td>68</td>
+<td><strong>CNET</strong> (Tim Long/Barclays)</td>
+<td>https://www.cnet.com/tech/mobile/iphone-fold-might-not-go-on-sale-until-december-report-says/</td>
+<td>"iPhone Fold Might Not Go On Sale Until December" - Tim Long (Barclays) dự đoán iPhone Fold mở bán <strong>tháng 12/2026</strong> thay vì tháng 9 do supply chain. Cũng dự đoán iPhone Plus có thể trở lại tháng 3/2027 thay iPhone Air. <em>Lưu ý: Long từng dự đoán sai về iPhone X &amp; 16.</em></td>
+<td>20/03/2026</td>
+</tr>
+<tr>
+<td>69</td>
+<td><strong>Economic Times</strong> (qua Wayback)</td>
+<td>https://economictimes.indiatimes.com/news/new-updates/apple-iphone-18-pro-max-colour-leaks-deep-red-finish-cosmic-orange-success/articleshow/128697215.cms</td>
+<td>"iPhone 18 Pro colours: Apple testing deep red finish" - Deep Red sau thành công Cosmic Orange. Foldable iPhone sẽ có màu cổ điển muted.</td>
+<td>03/2026</td>
+</tr>
+<tr>
+<td>70</td>
+<td><strong>Economic Times</strong> (qua Wayback)</td>
+<td>https://economictimes.indiatimes.com/news/new-updates/apple-uses-a-clever-trick-to-shield-iphone-18-customers-from-price-hike/articleshow/130083142.cms</td>
+<td>"Apple's clever trick may shield iPhone 18 from price hike" - Apple gánh chi phí DRAM tăng để giữ giá iPhone 18 retail ổn định.</td>
+<td>04-05/2026</td>
+</tr>
+<tr>
+<td>71</td>
+<td><strong>Economic Times</strong> (qua Wayback)</td>
+<td>https://economictimes.indiatimes.com/news/new-updates/apples-upcoming-foldable-and-iphone-18-pro-max-dummy-images-leaked-check-iphone-18-series-hand-on-size-look/articleshow/130080121.cms</td>
+<td>"Foldable &amp; iPhone 18 Pro Max dummy images leaked" - Sonny Dickson dummy unit màu <strong>pink/magenta</strong>, kích thước thực tế của iPhone Fold book-style.</td>
+<td>05/2026</td>
+</tr>
+<tr>
+<td>72</td>
+<td><strong>Economic Times</strong> (qua Wayback)</td>
+<td>https://economictimes.indiatimes.com/news/new-updates/apple-iphone-17-pro-max-cheapest-deal-on-vijay-sales-amid-buzz-of-iphone-18-launch-check-details/articleshow/129719619.cms</td>
+<td>"iPhone 17 Pro Max deal amid iPhone 18 buzz" - Bối cảnh giá iPhone 17 Pro Max tại Ấn Độ giảm xuống &lt;Rs 1.37 lakh khi iPhone 18 sắp ra.</td>
+<td>04-05/2026</td>
+</tr>
+<tr>
+<td>73</td>
+<td><strong>Economic Times</strong> (qua Wayback)</td>
+<td>https://economictimes.indiatimes.com/us/news/apples-iphone-18-pro-max-may-skip-black-heres-what-could-replace-it/articleshow/130011592.cms</td>
+<td>"iPhone 18 Pro Max may skip black" - Phân tích lý do Apple bỏ màu đen 2 năm liên tiếp - do material choice. Bản tiêu chuẩn vẫn có thể có màu đen.</td>
+<td>04/2026</td>
+</tr>
+<tr>
+<td>74</td>
+<td><strong>Times of India</strong> (mạng cùng GadgetsNow)</td>
+<td>https://timesofindia.indiatimes.com/technology/mobiles-tabs/apple-iphone-18-pro-max-may-launch-in-september-design-new-colour-options-processor-and-other-features-to-expect/articleshow/130846188.cms</td>
+<td>"iPhone 18 Pro Max may launch in September" - Tổng hợp đầy đủ: thiết kế, màu mới, processor A20 Pro, camera variable aperture. <strong>Đây là bản nội dung được mirror trên GadgetsNow.</strong></td>
+<td>06/05/2026</td>
+</tr>
+<tr>
+<td>75</td>
+<td><strong>Times of India</strong></td>
+<td>https://timesofindia.indiatimes.com/technology/mobiles-tabs/apple-may-follow-iphone-17-pro-colour-strategy-with-iphone-18-pro-report/articleshow/130103809.cms</td>
+<td>"Apple may follow iPhone 17 Pro colour strategy" - 3 màu mới như chiến lược 17 Pro - thay vì giữ Cosmic Orange.</td>
+<td>08/04/2026</td>
+</tr>
+<tr>
+<td>76</td>
+<td><strong>Times of India</strong></td>
+<td>https://timesofindia.indiatimes.com/technology/mobiles-tabs/apple-may-launch-iphone-18-pro-models-in-new-darker-colours-what-to-expect/articleshow/130338618.cms</td>
+<td>"iPhone 18 Pro in darker colours" - Hướng đi mới của Apple - các tông tối hơn (burgundy, coffee, deep purple).</td>
+<td>17/04/2026</td>
+</tr>
+<tr>
+<td>77</td>
+<td><strong>Times of India</strong></td>
+<td>https://timesofindia.indiatimes.com/technology/tech-news/iphone-18-launch-and-other-small-but-important-things-that-apples-outgoing-ceo-tim-cooks-letter-to-employees-tells/articleshow/130506931.cms</td>
+<td>"iPhone 18 launch under new CEO" - <strong>CEO mới John Ternus</strong> thay Tim Cook (CEO cũ về vai trò Chairman). iPhone 18 sẽ là sản phẩm flagship đầu tiên ra mắt dưới thời CEO Ternus. Ternus là kỹ sư phần cứng kỳ cựu, từng làm việc dưới thời Steve Jobs.</td>
+<td>25/04/2026</td>
+</tr>
+<tr>
+<td>78</td>
+<td><strong>Gadgets Now (mirror qua TOI/Wayback)</strong></td>
+<td>https://www.gadgetsnow.com/topic/iphone-18</td>
+<td><em>Site bị geo-block Akamai cho IP Vietnam. Đã thử Wayback Machine - chỉ archive được trang sản phẩm iPhone 17/16, không có bài iPhone 18 cụ thể. </em><em>Nội dung GadgetsNow gần như mirror y nguyên Times of India</em><em> (cùng Times Internet network) - vui lòng tham khảo các bài TOI ở STT 74-77.</em></td>
+<td>-</td>
+</tr>
+<tr>
+<td>79</td>
+<td><strong>Zhihu (Chuyên lan)</strong></td>
+<td>https://zhuanlan.zhihu.com/p/21718862249 https://zhuanlan.zhihu.com/p/8045315627 https://zhuanlan.zhihu.com/p/633905889 https://zhuanlan.zhihu.com/p/5527428795</td>
+<td><em>Zhihu có anti-scraping mạnh, không thể crawl tự động (cả trực tiếp lẫn qua Wayback/archive.today đều không có snapshot). Đề xuất: mở trực tiếp trên trình duyệt với VPN Trung Quốc + cookie để đọc.</em></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Cập nhật truy cập nguồn (09/05/2026 - lần 2):</strong><br />
+- <strong>Đã crawl thành công 26 bài mới</strong> từ Forbes (13 bài qua DDG/Bing search), CNET (6 bài), Economic Times (5 bài qua Wayback Machine), Times of India (4 bài - mirror của GadgetsNow).<br />
+- <strong>Forbes</strong>: tìm được 14 URL unique, đã fetch full content 13/14 (1 URL trùng do encoded character).<br />
+- <strong>GadgetsNow</strong>: vẫn bị Akamai chặn ở mọi cách thử (direct curl, Wayback, archive.today, Bing/DDG). Tuy nhiên, do GadgetsNow thuộc Times Internet network và <strong>mirror nội dung từ Times of India</strong>, nên 4 bài TOI (STT 74-77) chính là phiên bản nội dung trên GadgetsNow.<br />
+- <strong>Zhihu</strong>: anti-scraping/captcha rất mạnh. Sogou tìm được URL nhưng không fetch được nội dung. Cần xem trực tiếp trên trình duyệt.</p>
+</blockquote>
+<hr />
+<h2 id="ii-thong-so-ky-thuat-iphone-18-series" data-section="ii-thong-so-ky-thuat-iphone-18-series">II. THÔNG SỐ KỸ THUẬT IPHONE 18 SERIES</h2>
+<blockquote>
+<p><strong>Lưu ý:</strong> Bảng dưới tổng hợp thông số dự đoán cho 5 phiên bản: iPhone 18, iPhone 18e, iPhone 18 Pro, iPhone 18 Pro Max, iPhone Air 2, iPhone Fold. Các trường có dấu (<em>) là thông số dùng chung hoặc chưa có nguồn xác nhận chi tiết.<br />
+Mỗi thông số đều </em><em>kèm dẫn nguồn</em>*. Khi có sự không thống nhất giữa các nguồn, cả 2 thông số dự đoán đều được liệt kê.</p>
+</blockquote>
+<h3 id="21-iphone-18-ban-tieu-chuan">2.1. iPhone 18 (bản tiêu chuẩn)</h3>
+<table>
+<thead>
+<tr>
+<th>Thông số</th>
+<th>Giá trị dự đoán</th>
+<th>Nguồn dẫn chứng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>THÔNG SỐ THIẾT KẾ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Khối lượng</td>
+<td>Chưa có thông tin chính thức (dự đoán tương tự iPhone 17 ~177g)</td>
+<td>Suy luận từ MacRumors roundup iPhone 18</td>
+</tr>
+<tr>
+<td>Kích thước</td>
+<td>Tương tự iPhone 17 (~150 × 71.5 × 7.95mm)</td>
+<td>MacRumors roundup iPhone 18 (09/04/2026)</td>
+</tr>
+<tr>
+<td>Chất liệu</td>
+<td>Khung nhôm anodized + mặt lưng kính</td>
+<td>MacRumors (05/05/2026) - "no major design changes"</td>
+</tr>
+<tr>
+<td>Chống nước &amp; bụi</td>
+<td>IP68 (chuẩn iPhone hiện tại - 6m, 30 phút)</td>
+<td>Suy luận từ chuẩn iPhone 17</td>
+</tr>
+<tr>
+<td>Màu sắc</td>
+<td>Chưa có leak chính thức cho bản tiêu chuẩn</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Thời điểm ra mắt</td>
+<td>Mùa xuân 2027 (khoảng tháng 3)</td>
+<td>MacRumors 07/05/2026; PhoneArena 02/2026</td>
+</tr>
+<tr>
+<td>Xuất xứ thương hiệu</td>
+<td>Apple (Mỹ); sản xuất tại Trung Quốc/Ấn Độ</td>
+<td>Apple</td>
+</tr>
+<tr>
+<td><strong>THÔNG SỐ MÀN HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Công nghệ màn hình</td>
+<td>OLED Super Retina XDR / LTPO (có nguồn cho rằng panel đời cũ hơn 17)</td>
+<td>PhoneArena spec page; MacRumors 05/05/2026 (downgrade rumor)</td>
+</tr>
+<tr>
+<td>Tần số quét</td>
+<td>120Hz LTPO (có nguồn) hoặc 60Hz (nếu downgrade)</td>
+<td>PhoneArena (120Hz LTPO); MacRumors (downgrade)</td>
+</tr>
+<tr>
+<td>Độ sáng tối đa</td>
+<td>Tương đương 17 (~3.000 nits ngoài trời)</td>
+<td>Suy luận từ MacRumors</td>
+</tr>
+<tr>
+<td>Kích thước màn hình</td>
+<td>6.3 inch (đa số nguồn) hoặc 6.27 inch</td>
+<td>MacRumors roundup iPhone 18; PhoneArena</td>
+</tr>
+<tr>
+<td>Độ phân giải</td>
+<td>~2622 × 1206 (tương tự iPhone 17)</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>Tỉ lệ màn hình</td>
+<td>~19.5:9</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>Mật độ điểm ảnh</td>
+<td>~460 ppi</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td><strong>THÔNG SỐ CẤU HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Chipset</td>
+<td>Apple A20 (TSMC 2nm) - có nguồn cho rằng có thể bị đổi tên/downgrade</td>
+<td>MacRumors 05/05/2026; TechRadar 10/2025</td>
+</tr>
+<tr>
+<td>Chip đồ họa GPU</td>
+<td>GPU tích hợp trên A20</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Hệ điều hành</td>
+<td>iOS 27 (dự kiến)</td>
+<td>Suy luận từ chu kỳ Apple</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>12GB</td>
+<td>MacRumors 25/10/2025; TechRadar</td>
+</tr>
+<tr>
+<td>ROM</td>
+<td>256GB / 512GB / 1TB (dự kiến giữ như 17)</td>
+<td>Tom's Guide 04/2026</td>
+</tr>
+<tr>
+<td>Thẻ nhớ ngoài</td>
+<td>Không hỗ trợ</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td><strong>HỆ THỐNG ÂM THANH &amp; PIN</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Âm thanh</td>
+<td>Stereo speaker, Spatial Audio</td>
+<td>Suy luận từ chuẩn Apple</td>
+</tr>
+<tr>
+<td>Pin - Kiểu</td>
+<td>Lithium-ion</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Pin - Hiệu suất</td>
+<td>Tương tự iPhone 17 hoặc cải thiện nhẹ nhờ A20</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Cổng sạc vào</td>
+<td>USB-C (USB 2.0 - dự kiến giữ nguyên bản tiêu chuẩn)</td>
+<td>Suy luận từ iPhone 17</td>
+</tr>
+<tr>
+<td><strong>THÔNG SỐ CAMERA</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Số camera</td>
+<td>2 (sau)</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Đèn Flash</td>
+<td>True Tone Flash</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Camera chính</td>
+<td>48MP Fusion (chưa có variable aperture)</td>
+<td>MacRumors 22/04/2026</td>
+</tr>
+<tr>
+<td>Camera Ultra Wide</td>
+<td>12MP</td>
+<td>Suy luận từ iPhone 17</td>
+</tr>
+<tr>
+<td>Camera chụp xa</td>
+<td>Không có (chỉ Pro mới có telephoto)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Camera sau 4</td>
+<td>Không có</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Tính năng camera sau</td>
+<td>Smart HDR 5, Photographic Styles, Cinematic mode</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Camera trước 1</td>
+<td>24MP (TrueDepth) - <strong>nâng cấp lớn</strong></td>
+<td>MacRumors 07/11/2025</td>
+</tr>
+<tr>
+<td>Camera trước 2</td>
+<td>Không có</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Khả năng zoom</td>
+<td>Zoom số 5x</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td><strong>CÔNG NGHỆ &amp; TIỆN ÍCH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Số SIM</td>
+<td>eSIM (chuẩn iPhone hiện tại tại Mỹ); 1 nano-SIM + eSIM ở nhiều thị trường</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Modem</td>
+<td>C2 (dự kiến) hoặc C1X</td>
+<td>MacRumors 20/04/2026</td>
+</tr>
+<tr>
+<td>Chuẩn Wi-Fi</td>
+<td>Wi-Fi 7 (qua chip N1 hoặc N2)</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Chuẩn Bluetooth</td>
+<td>Bluetooth 6</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Chuẩn GPS</td>
+<td>GPS, GLONASS, Galileo, QZSS, BeiDou, NavIC</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Cảm biến</td>
+<td>Face ID, Cảm biến vân tay (không), gia tốc, hồi chuyển, ánh sáng, tiệm cận, áp suất</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Tiện ích khác</td>
+<td>Dynamic Island (nhỏ hơn 35%), Apple Intelligence, Camera Control đơn giản hóa</td>
+<td>MacRumors 20/04/2026</td>
+</tr>
+<tr>
+<td>Bảo mật</td>
+<td>Face ID</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Công nghệ đáng chú ý khác</td>
+<td>Apple Intelligence, MagSafe</td>
+<td>Apple</td>
+</tr>
+<tr>
+<td>Tản nhiệt</td>
+<td>Hệ thống tản nhiệt buồng hơi (vapor chamber) - có thể chỉ dòng Pro mới có</td>
+<td>MacRumors</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-iphone-18e">2.2. iPhone 18e</h3>
+<table>
+<thead>
+<tr>
+<th>Thông số</th>
+<th>Giá trị dự đoán</th>
+<th>Nguồn dẫn chứng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>THIẾT KẾ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Khối lượng</td>
+<td>Chưa có thông tin (~170g dự đoán)</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>Kích thước</td>
+<td>Tương tự iPhone 16e/17e</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>Chất liệu</td>
+<td>Khung nhôm + mặt lưng kính</td>
+<td>PhoneArena spec</td>
+</tr>
+<tr>
+<td>Chống nước &amp; bụi</td>
+<td>IP68</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Màu sắc</td>
+<td>Chưa có leak</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Thời điểm ra mắt</td>
+<td>Mùa xuân 2027 (~tháng 3)</td>
+<td>MacRumors 08/04/2026</td>
+</tr>
+<tr>
+<td>Xuất xứ</td>
+<td>Apple (Mỹ)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>MÀN HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Công nghệ</td>
+<td>OLED</td>
+<td>PhoneArena</td>
+</tr>
+<tr>
+<td>Tần số quét</td>
+<td>60Hz (chuẩn dòng e)</td>
+<td>PhoneArena</td>
+</tr>
+<tr>
+<td>Độ sáng tối đa</td>
+<td>~1.200-2.000 nits</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>Kích thước</td>
+<td>6.1 inch</td>
+<td>MacRumors roundup</td>
+</tr>
+<tr>
+<td>Độ phân giải</td>
+<td>~2532 × 1170</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>Tỉ lệ</td>
+<td>~19.5:9</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Mật độ điểm ảnh</td>
+<td>~460 ppi</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>CẤU HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Chipset</td>
+<td>A20 (có thể là biến thể cắt giảm GPU)</td>
+<td>MacRumors 05/05/2026</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>Tích hợp trên A20</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Hệ điều hành</td>
+<td>iOS 27</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>12GB (đồng nhất toàn dòng)</td>
+<td>TechRadar 10/2025</td>
+</tr>
+<tr>
+<td>ROM</td>
+<td>128GB / 256GB / 512GB</td>
+<td>Suy luận từ iPhone 17e</td>
+</tr>
+<tr>
+<td>Thẻ nhớ ngoài</td>
+<td>Không</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>ÂM THANH &amp; PIN</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Âm thanh</td>
+<td>Stereo</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Pin - Kiểu</td>
+<td>Lithium-ion</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Pin - Hiệu suất</td>
+<td>Cải thiện nhờ A20 (~20-25 giờ video)</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>Cổng sạc</td>
+<td>USB-C (USB 2.0)</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td><strong>CAMERA</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Số camera sau</td>
+<td>1 (có thể 2 nếu Apple tăng cấp)</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Đèn Flash</td>
+<td>True Tone Flash</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Camera chính</td>
+<td>48MP Fusion</td>
+<td>Suy luận từ 17e</td>
+</tr>
+<tr>
+<td>Camera Ultra Wide</td>
+<td>Không (dòng e thường chỉ 1 camera)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Camera chụp xa</td>
+<td>Không</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Camera trước</td>
+<td>24MP TrueDepth</td>
+<td>MacRumors 07/11/2025</td>
+</tr>
+<tr>
+<td>Khả năng zoom</td>
+<td>Zoom số 2x-5x</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>CÔNG NGHỆ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Số SIM</td>
+<td>eSIM</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Modem</td>
+<td>C1X hoặc C2</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Wi-Fi</td>
+<td>Wi-Fi 7</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Bluetooth</td>
+<td>Bluetooth 6</td>
+<td>-</td>
+</tr>
+<tr>
+<td>GPS</td>
+<td>Đầy đủ chuẩn</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Cảm biến</td>
+<td>Face ID, gia tốc, hồi chuyển</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Tiện ích</td>
+<td>Apple Intelligence, có thể vẫn có notch (không Dynamic Island)</td>
+<td>MacRumors 05/05/2026</td>
+</tr>
+<tr>
+<td>Bảo mật</td>
+<td>Face ID</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Tản nhiệt</td>
+<td>Cơ bản</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-iphone-18-pro">2.3. iPhone 18 Pro</h3>
+<table>
+<thead>
+<tr>
+<th>Thông số</th>
+<th>Giá trị dự đoán</th>
+<th>Nguồn dẫn chứng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>THIẾT KẾ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Khối lượng</td>
+<td>Chưa có thông tin chi tiết (dự đoán ~199-200g, tương tự 17 Pro)</td>
+<td>Suy luận từ MacRumors roundup</td>
+</tr>
+<tr>
+<td>Kích thước</td>
+<td>~149.6 × 71.5 × 8.75mm (giữ tương tự 17 Pro)</td>
+<td>MacRumors roundup iPhone 18 Pro</td>
+</tr>
+<tr>
+<td>Chất liệu</td>
+<td><strong>Khung nhôm anodized</strong> (không phải titan) + Ceramic Shield mặt lưng frosted (redesign)</td>
+<td>MacRumors 20/04/2026; Tom's Guide</td>
+</tr>
+<tr>
+<td>Chống nước &amp; bụi</td>
+<td>IP68 (6m, 30 phút)</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Màu sắc</td>
+<td><strong>4 màu</strong> theo Macworld leak: Light Blue, <strong>Dark Cherry</strong> (chủ đạo - "gần wine hơn fruit punch"), Dark Gray, Silver. Theo leaker Instant Digital (Weibo): Dark Cherry là <strong>mix của burgundy + coffee + deep purple</strong>. Cosmic Orange bị huỷ. <strong>Năm thứ 2 không có Pro màu đen</strong> (Dark Gray thay thế).</td>
+<td>Forbes 18/04/2026; Forbes 23/04/2026; CNET 08/05/2026; MacRumors 20/04/2026</td>
+</tr>
+<tr>
+<td>Thời điểm ra mắt</td>
+<td><strong>Tháng 9/2026</strong> - dự đoán cụ thể: <strong>Keynote ngày 9/9/2026 (thứ Tư)</strong>, hoặc 15-16/9 (loại trừ 8/9 do Labor Day, 11/9 Apple kiêng). Mở bán &lt;2 tuần sau keynote. <strong>iPhone 18 Pro là flagship đầu tiên ra mắt dưới thời CEO mới John Ternus</strong> (thay Tim Cook).</td>
+<td>Forbes 05/05/2026; TOI 25/04/2026; MacRumors 07/05/2026</td>
+</tr>
+<tr>
+<td>Xuất xứ</td>
+<td>Apple (Mỹ); sản xuất Trung Quốc/Ấn Độ</td>
+<td>Apple</td>
+</tr>
+<tr>
+<td><strong>MÀN HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Công nghệ màn hình</td>
+<td><strong>LTPO+ OLED</strong> (Samsung &amp; LG cung cấp)</td>
+<td>MacRumors 06/05/2026; MacRumors roundup</td>
+</tr>
+<tr>
+<td>Tần số quét</td>
+<td>120Hz ProMotion (LTPO+ cho phép tốc độ refresh nhanh hơn)</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Độ sáng tối đa</td>
+<td>Cải thiện so với 17 Pro (3.000 nits ngoài trời chuẩn 17, dự kiến tăng nhờ LTPO+)</td>
+<td>MacRumors 06/05/2026</td>
+</tr>
+<tr>
+<td>Kích thước màn hình</td>
+<td><strong>6.3 inch</strong></td>
+<td>MacRumors roundup iPhone 18 Pro</td>
+</tr>
+<tr>
+<td>Độ phân giải</td>
+<td>~2622 × 1206</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>Tỉ lệ màn hình</td>
+<td>~19.5:9</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Mật độ điểm ảnh</td>
+<td>~460 ppi</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>CẤU HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Chipset</td>
+<td><strong>Apple A20 Pro</strong> (TSMC 2nm) - 15% nhanh hơn, 30% tiết kiệm hơn A19</td>
+<td>MacRumors roundup; Geeky Gadgets</td>
+</tr>
+<tr>
+<td>Chip đồ họa GPU</td>
+<td>GPU tích hợp trên A20 Pro với "Super Cores"</td>
+<td>Geeky Gadgets 05/2026</td>
+</tr>
+<tr>
+<td>Hệ điều hành</td>
+<td>iOS 27</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td><strong>12GB</strong> (tích hợp WMCM - Wafer-Level Multi-Chip Module)</td>
+<td>MacRumors 19/01/2026; MacRumors roundup</td>
+</tr>
+<tr>
+<td>ROM</td>
+<td>256GB / 512GB / 1TB / 2TB (có thể tăng base lên 512GB)</td>
+<td>Tom's Guide 04/2026</td>
+</tr>
+<tr>
+<td>Thẻ nhớ ngoài</td>
+<td>Không</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>ÂM THANH &amp; PIN</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Âm thanh</td>
+<td>Stereo speaker, Spatial Audio, Dolby Atmos</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Pin - Kiểu</td>
+<td>Lithium-ion</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Pin - Hiệu suất</td>
+<td>Pin lớn hơn iPhone 17 Pro nhờ tối ưu A20 Pro (dùng đến 2 ngày)</td>
+<td>Gulf News; MacRumors</td>
+</tr>
+<tr>
+<td>Pin (dung lượng)</td>
+<td>Tăng so với 17 Pro (chưa có con số chính xác cho bản Pro)</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Cổng sạc vào</td>
+<td><strong>USB-C (USB 3.x)</strong></td>
+<td>Apple chuẩn dòng Pro</td>
+</tr>
+<tr>
+<td><strong>CAMERA</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Số camera</td>
+<td>3 (sau)</td>
+<td>MacRumors roundup</td>
+</tr>
+<tr>
+<td>Đèn Flash</td>
+<td>True Tone Flash với LiDAR</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Camera chính</td>
+<td><strong>48MP Fusion với khẩu độ biến thiên (Variable Aperture)</strong> - chuyển từ fixed f/1.78 sang khẩu mở rộng được. Sensor 1/1.28-inch. Sunny Optical sản xuất actuator, LG Innotek lắp ráp tại nhà máy Gumi (Hàn Quốc) tháng 6-7/2026.</td>
+<td>MacRumors 16/04/2026; Forbes 22/04/2026 (Paul Monckton); Tom's Guide</td>
+</tr>
+<tr>
+<td>Camera Ultra Wide</td>
+<td>48MP (giữ nguyên 17 Pro)</td>
+<td>PhoneArena spec</td>
+</tr>
+<tr>
+<td>Camera chụp xa (Telephoto)</td>
+<td>48MP với khẩu độ lớn hơn (cải thiện chụp đêm); 200MP (theo nguồn khác)</td>
+<td>MacRumors 22/04/2026; PhoneArena</td>
+</tr>
+<tr>
+<td>Camera sau 4</td>
+<td>Không (chỉ 3 camera + LiDAR)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Tính năng camera sau</td>
+<td>Variable aperture, Photonic Engine, Apple ProRAW, ProRes, sensor 3 lớp Samsung (đang cân nhắc)</td>
+<td>MacRumors 22/04/2026</td>
+</tr>
+<tr>
+<td>Camera trước 1</td>
+<td><strong>24MP TrueDepth</strong> (nâng cấp từ 18MP)</td>
+<td>MacRumors 07/11/2025</td>
+</tr>
+<tr>
+<td>Camera trước 2</td>
+<td>Không</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Khả năng zoom</td>
+<td>Zoom quang 5x, zoom số đến 25x</td>
+<td>Suy luận từ 17 Pro</td>
+</tr>
+<tr>
+<td><strong>CÔNG NGHỆ &amp; TIỆN ÍCH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Số SIM</td>
+<td>Dual eSIM (Mỹ); eSIM + nano-SIM (quốc tế)</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Modem</td>
+<td><strong>C2 (Apple custom, gen 3)</strong> với hỗ trợ mmWave 5G</td>
+<td>MacRumors 20/04/2026</td>
+</tr>
+<tr>
+<td>Chuẩn Wi-Fi</td>
+<td><strong>Wi-Fi 7</strong> (qua chip N2)</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Chuẩn Bluetooth</td>
+<td><strong>Bluetooth 6</strong></td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Chuẩn GPS</td>
+<td>GPS, GLONASS, Galileo, QZSS, BeiDou, NavIC</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Cảm biến</td>
+<td>Face ID (đèn flood illuminator dưới màn), LiDAR, gia tốc, hồi chuyển 3 trục, áp suất, ánh sáng, tiệm cận</td>
+<td>MacRumors 20/04/2026</td>
+</tr>
+<tr>
+<td>Tiện ích khác</td>
+<td><strong>Dynamic Island nhỏ hơn 35%</strong> (~13.5mm vs 20.7mm), <strong>5G qua vệ tinh (NR-NTN)</strong>, Apple Intelligence</td>
+<td>MacRumors 20/04/2026; MacRumors roundup</td>
+</tr>
+<tr>
+<td>Bảo mật</td>
+<td>Face ID (vẫn ở vị trí cũ, đèn flood đưa xuống dưới màn)</td>
+<td>MacRumors 20/04/2026</td>
+</tr>
+<tr>
+<td>Công nghệ đáng chú ý khác</td>
+<td><strong>Camera Control đơn giản hóa</strong> (chỉ pressure-sensitive, bỏ touch &amp; haptic), <strong>chip mạng N2</strong>, MagSafe</td>
+<td>MacRumors 20/04/2026</td>
+</tr>
+<tr>
+<td>Tản nhiệt</td>
+<td>Buồng hơi (vapor chamber - giữ nguyên từ 17 Pro)</td>
+<td>MacRumors</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-iphone-18-pro-max">2.4. iPhone 18 Pro Max</h3>
+<table>
+<thead>
+<tr>
+<th>Thông số</th>
+<th>Giá trị dự đoán</th>
+<th>Nguồn dẫn chứng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>THIẾT KẾ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Khối lượng</td>
+<td><strong>&gt;240g</strong> (nặng nhất kể từ iPhone 14 Pro Max; 17 Pro Max là 233g)</td>
+<td>MacRumors 11/03/2026</td>
+</tr>
+<tr>
+<td>Kích thước</td>
+<td>~163 × 77.6 × <strong>8.8mm</strong> (dày hơn 17 Pro Max là 8.75mm)</td>
+<td>MacRumors 11/03/2026</td>
+</tr>
+<tr>
+<td>Chất liệu</td>
+<td>Khung nhôm anodized + mặt lưng Ceramic Shield frosted redesign; bệ camera dày 11.54mm (tăng từ 11.23mm)</td>
+<td>MacRumors roundup; MacRumors 11/03/2026</td>
+</tr>
+<tr>
+<td>Chống nước &amp; bụi</td>
+<td>IP68 (6m, 30 phút)</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Màu sắc</td>
+<td>4 màu: Light Blue, <strong>Dark Cherry</strong> (chủ đạo - mix burgundy/coffee/deep purple), Dark Gray, Silver. Cosmic Orange bị huỷ.</td>
+<td>Forbes 18/04/2026; Forbes 23/04/2026; MacRumors roundup; Impressive Times</td>
+</tr>
+<tr>
+<td>Thời điểm ra mắt</td>
+<td><strong>Tháng 9/2026</strong> (10 ngày đầu)</td>
+<td>MacRumors 07/05/2026</td>
+</tr>
+<tr>
+<td>Xuất xứ</td>
+<td>Apple (Mỹ)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>MÀN HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Công nghệ</td>
+<td><strong>LTPO+ OLED</strong> (Samsung &amp; LG)</td>
+<td>MacRumors 06/05/2026</td>
+</tr>
+<tr>
+<td>Tần số quét</td>
+<td>120Hz ProMotion</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Độ sáng tối đa</td>
+<td>Tăng so với 17 Pro Max (3.000 nits chuẩn) nhờ LTPO+</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Kích thước màn hình</td>
+<td><strong>6.9 inch</strong></td>
+<td>MacRumors 11/03/2026</td>
+</tr>
+<tr>
+<td>Độ phân giải</td>
+<td>~2868 × 1320</td>
+<td>Suy luận từ 17 Pro Max</td>
+</tr>
+<tr>
+<td>Tỉ lệ màn hình</td>
+<td>~19.5:9</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Mật độ điểm ảnh</td>
+<td>~460 ppi</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>CẤU HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Chipset</td>
+<td><strong>Apple A20 Pro</strong> (TSMC 2nm)</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>GPU tích hợp với "Super Cores"</td>
+<td>Geeky Gadgets</td>
+</tr>
+<tr>
+<td>Hệ điều hành</td>
+<td>iOS 27</td>
+<td>-</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td><strong>12GB</strong> (WMCM packaging)</td>
+<td>MacRumors 19/01/2026</td>
+</tr>
+<tr>
+<td>ROM</td>
+<td>256GB / 512GB / 1TB / 2TB</td>
+<td>Tom's Guide</td>
+</tr>
+<tr>
+<td>Thẻ nhớ ngoài</td>
+<td>Không</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>ÂM THANH &amp; PIN</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Âm thanh</td>
+<td>Stereo, Spatial Audio, Dolby Atmos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Pin - Kiểu</td>
+<td>Lithium-ion</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Pin (dung lượng)</td>
+<td><strong>5.100-5.200 mAh</strong> (lớn nhất trên iPhone không gập từ trước đến nay; iPhone 17 Pro Max là 5.088 mAh). Trọng lượng chỉ tăng 3g so với 17 Pro Max nhờ tối ưu.</td>
+<td>MacRumors 11/03/2026; Forbes 23/02/2026; Forbes 17/04/2026 (Spence); Gulf News</td>
+</tr>
+<tr>
+<td>Pin - Hiệu suất</td>
+<td>Có thể dùng 2 ngày</td>
+<td>Gulf News</td>
+</tr>
+<tr>
+<td>Cổng sạc vào</td>
+<td>USB-C (USB 3.x)</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td><strong>CAMERA</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Số camera</td>
+<td>3 (sau)</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Đèn Flash</td>
+<td>True Tone Flash + LiDAR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Camera chính</td>
+<td><strong>48MP Fusion với Variable Aperture (cơ học)</strong></td>
+<td>MacRumors 16/04/2026; Geeky Gadgets</td>
+</tr>
+<tr>
+<td>Camera Ultra Wide</td>
+<td>48MP</td>
+<td>PhoneArena</td>
+</tr>
+<tr>
+<td>Camera chụp xa</td>
+<td>48MP với khẩu độ lớn hơn (cải thiện chụp tối, ít noise hơn)</td>
+<td>MacRumors 22/04/2026</td>
+</tr>
+<tr>
+<td>Camera sau 4</td>
+<td>Không (3 camera + LiDAR)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Tính năng camera sau</td>
+<td>Variable aperture, sensor 3 lớp Samsung (test), ProRAW, ProRes, Cinematic 4K</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Camera trước 1</td>
+<td><strong>24MP TrueDepth</strong></td>
+<td>MacRumors 07/11/2025</td>
+</tr>
+<tr>
+<td>Camera trước 2</td>
+<td>Không</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Khả năng zoom</td>
+<td>Zoom quang 5x, zoom số 25x</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>CÔNG NGHỆ &amp; TIỆN ÍCH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Số SIM</td>
+<td>Dual eSIM (Mỹ); eSIM + nano-SIM (quốc tế)</td>
+<td>Apple</td>
+</tr>
+<tr>
+<td>Modem</td>
+<td><strong>C2 modem</strong> với mmWave 5G</td>
+<td>MacRumors 20/04/2026</td>
+</tr>
+<tr>
+<td>Wi-Fi</td>
+<td>Wi-Fi 7 (qua N2)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Bluetooth</td>
+<td>Bluetooth 6</td>
+<td>-</td>
+</tr>
+<tr>
+<td>GPS</td>
+<td>Đầy đủ chuẩn (GPS, GLONASS, Galileo, QZSS, BeiDou, NavIC)</td>
+<td>Apple</td>
+</tr>
+<tr>
+<td>Cảm biến</td>
+<td>Face ID (flood illuminator dưới màn), LiDAR, gia tốc, hồi chuyển, áp suất, ánh sáng, tiệm cận</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Tiện ích</td>
+<td><strong>Dynamic Island nhỏ hơn 35%</strong>, <strong>5G qua vệ tinh</strong>, Apple Intelligence</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Bảo mật</td>
+<td>Face ID</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Công nghệ đáng chú ý khác</td>
+<td>Camera Control đơn giản hóa, N2 networking chip, MagSafe</td>
+<td>MacRumors 20/04/2026</td>
+</tr>
+<tr>
+<td>Tản nhiệt</td>
+<td>Buồng hơi (vapor chamber) cải tiến (cần thiết do A20 mạnh hơn)</td>
+<td>MacRumors</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-iphone-air-2">2.5. iPhone Air 2</h3>
+<table>
+<thead>
+<tr>
+<th>Thông số</th>
+<th>Giá trị dự đoán</th>
+<th>Nguồn dẫn chứng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>THIẾT KẾ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Khối lượng</td>
+<td>Mỏng &amp; nhẹ (kế thừa Air 1)</td>
+<td>TechRadar 04/2026</td>
+</tr>
+<tr>
+<td>Kích thước</td>
+<td>Mỏng nhất dòng iPhone (chưa có số cụ thể)</td>
+<td>TechRadar</td>
+</tr>
+<tr>
+<td>Chất liệu</td>
+<td>Khung titan/nhôm</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>Chống nước &amp; bụi</td>
+<td>IP68</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td>Màu sắc</td>
+<td>Chưa có leak</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Thời điểm ra mắt</td>
+<td><strong>Mùa xuân 2027</strong></td>
+<td>MacRumors 08/04/2026</td>
+</tr>
+<tr>
+<td>Xuất xứ</td>
+<td>Apple (Mỹ)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>MÀN HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Công nghệ</td>
+<td>OLED</td>
+<td>PhoneArena</td>
+</tr>
+<tr>
+<td>Tần số quét</td>
+<td>120Hz</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Kích thước</td>
+<td>~6.5 inch (giữa 18 và 18 Pro Max)</td>
+<td>Suy luận từ Air 1</td>
+</tr>
+<tr>
+<td><strong>CẤU HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Chipset</td>
+<td>A20</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>12GB</td>
+<td>TechRadar</td>
+</tr>
+<tr>
+<td>ROM</td>
+<td>256GB / 512GB / 1TB</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td><strong>CAMERA</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Số camera sau</td>
+<td><strong>2</strong> (lần đầu tiên dòng Air có camera kép)</td>
+<td>TechRadar 04/2026</td>
+</tr>
+<tr>
+<td>Camera chính</td>
+<td>48MP</td>
+<td>Suy luận</td>
+</tr>
+<tr>
+<td>Camera trước</td>
+<td>24MP</td>
+<td>MacRumors 07/11/2025</td>
+</tr>
+<tr>
+<td><strong>CÔNG NGHỆ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Modem</td>
+<td>C2</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Wi-Fi</td>
+<td>Wi-Fi 7</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Bluetooth</td>
+<td>Bluetooth 6</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Bảo mật</td>
+<td>Face ID</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Tản nhiệt</td>
+<td>Hạn chế (do thiết kế mỏng)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="26-iphone-fold-foldable">2.6. iPhone Fold (foldable)</h3>
+<table>
+<thead>
+<tr>
+<th>Thông số</th>
+<th>Giá trị dự đoán</th>
+<th>Nguồn dẫn chứng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>THIẾT KẾ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Khối lượng</td>
+<td>Chưa công bố</td>
+<td>MacRumors guide foldable</td>
+</tr>
+<tr>
+<td>Kích thước</td>
+<td><strong>Mở: ~4.5mm</strong> (mỏng nhất từ trước đến nay), <strong>Gập: 9-9.5mm</strong></td>
+<td>MacRumors guide foldable</td>
+</tr>
+<tr>
+<td>Chất liệu</td>
+<td><strong>Khung titan (chịu lực) + nhôm (tản nhiệt)</strong>; bản lề kim loại lỏng (amorphous metal); kính siêu mỏng do Lens Technology + Corning</td>
+<td>MacRumors guide foldable 12/03/2026</td>
+</tr>
+<tr>
+<td>Chống nước &amp; bụi</td>
+<td>Chưa rõ (thường foldable không IP cao)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Màu sắc</td>
+<td>Đen, trắng, <strong>Deep Red</strong> (đang test); dummy unit lộ màu <strong>pink/magenta</strong> đặc biệt</td>
+<td>MacRumors; Economic Times 05/2026 (Sonny Dickson)</td>
+</tr>
+<tr>
+<td>Tên gọi (rumor)</td>
+<td>Có thể tên là <strong>"iPhone Ultra"</strong> (theo leaker Digital Chat Station/Forbes)</td>
+<td>CNET 27/04/2026; Forbes 23/04/2026</td>
+</tr>
+<tr>
+<td>Thời điểm ra mắt</td>
+<td><strong>Tháng 9/2026</strong> (cùng iPhone 18 Pro) hoặc <strong>tháng 12/2026</strong></td>
+<td>MacRumors guide foldable; Tom's Guide</td>
+</tr>
+<tr>
+<td>Xuất xứ</td>
+<td>Apple (Mỹ)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>MÀN HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Công nghệ</td>
+<td>OLED tùy chỉnh do Samsung sản xuất, có integrated touch sensor</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Tần số quét</td>
+<td>120Hz</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Màn ngoài</strong></td>
+<td><strong>5.49 inch, 2.088 × 1.422 (4:3)</strong></td>
+<td>MacRumors guide foldable</td>
+</tr>
+<tr>
+<td><strong>Màn trong</strong></td>
+<td><strong>7.76 inch, 2.713 × 1.920</strong></td>
+<td>MacRumors guide foldable</td>
+</tr>
+<tr>
+<td>Vết gập (crease)</td>
+<td>"Gần như vô hình" - sâu &lt;0.15mm, góc gập &lt;2.5°</td>
+<td>MacRumors guide foldable</td>
+</tr>
+<tr>
+<td><strong>CẤU HÌNH</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Chipset</td>
+<td>A20 (TSMC 2nm)</td>
+<td>MacRumors guide foldable</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>12GB</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>ROM</td>
+<td>256GB / 512GB / 1TB</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td><strong>ÂM THANH &amp; PIN</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Pin (dung lượng)</td>
+<td><strong>5.400-5.800 mAh</strong> (lớn nhất từ trước đến nay)</td>
+<td>MacRumors guide foldable</td>
+</tr>
+<tr>
+<td>Pin - Tối ưu</td>
+<td>Display driver IC từ 28nm xuống 16nm; pin mật độ cao</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Cổng sạc</td>
+<td>USB-C</td>
+<td>Apple chuẩn</td>
+</tr>
+<tr>
+<td><strong>CAMERA</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Số camera sau</td>
+<td><strong>2</strong> - 48MP main + 48MP ultra-wide (không có telephoto)</td>
+<td>MacRumors guide foldable; Tom's Guide</td>
+</tr>
+<tr>
+<td>Camera trong (under-display)</td>
+<td>24MP - hỗ trợ Touch ID</td>
+<td>MacRumors guide foldable</td>
+</tr>
+<tr>
+<td>Camera ngoài</td>
+<td>Camera lỗ đột (single front-facing)</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td><strong>CÔNG NGHỆ</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Số SIM</td>
+<td><strong>eSIM only</strong> (không slot SIM vật lý)</td>
+<td>MacRumors guide foldable</td>
+</tr>
+<tr>
+<td>Modem</td>
+<td><strong>C2 modem (gen 2 Apple)</strong> với mmWave 5G</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td><strong>Bảo mật</strong></td>
+<td><strong>Touch ID (tích hợp trong nút nguồn cạnh máy)</strong> - không Face ID</td>
+<td>MacRumors guide foldable</td>
+</tr>
+<tr>
+<td>Tiện ích</td>
+<td>Camera Control button, glass mid-frame để giảm crease</td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td>Đặc biệt</td>
+<td><strong>Không MagSafe</strong>, <strong>không Face ID</strong></td>
+<td>MacRumors</td>
+</tr>
+<tr>
+<td><strong>Giá</strong></td>
+<td>$1.800-$2.900 (256GB ~$2.320; 512GB ~$2.610; 1TB ~$2.900)</td>
+<td>MacRumors guide foldable</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iii-dan-y-iphone-18-khi-nao-ra-mat" data-section="iii-dan-y-iphone-18-khi-nao-ra-mat">III. DÀN Ý: "IPHONE 18 KHI NÀO RA MẮT"</h2>
+<blockquote>
+<p><strong>Cấu trúc dàn ý dựa trên:</strong> File mẫu <code>26 - ra mắt - iphone 15 khi nào ra mắt_.docx</code><br />
+<strong>Nội dung tích hợp:</strong> Thông tin iPhone 18 từ Mục I &amp; II ở trên</p>
+</blockquote>
+<h3 id="tu-khoa-chinh-iphone-18-khi-nao-ra-mat">Từ khóa chính: iphone 18 khi nào ra mắt</h3>
+<h3 id="tu-khoa-phu">Từ khóa phụ:</h3>
+<ul>
+<li>iphone 18 bao giờ ra mắt</li>
+<li>khi nào iphone 18 ra mắt</li>
+<li>khi nào ra iphone 18</li>
+<li>ngày ra mắt iphone 18</li>
+<li>iphone 18 ra mắt</li>
+<li>iphone 18 ra mắt khi nào</li>
+<li>iphone 18 khi nào ra</li>
+<li>iphone 18 bao giờ ra</li>
+<li>iphone 18 ngày ra mắt</li>
+<li>iphone 18 ra mắt ngày nào</li>
+<li>iphone 18 khi nào bán</li>
+<li>iphone 18 ra đời năm nào</li>
+<li>iphone 18 khi nào về việt nam</li>
+<li>iphone 18 khi nào ra mắt tại việt nam</li>
+<li>iphone 18 pro max khi nào ra mắt</li>
+<li>ra mắt iphone 18</li>
+<li>bao giờ ra iphone 18</li>
+<li>iphone 18 ra chưa</li>
+<li>iphone 18 pro khi nào ra mắt</li>
+<li>iphone fold khi nào ra mắt</li>
+<li>iphone air 2 khi nào ra mắt</li>
+</ul>
+<h3 id="search-intent">Search Intent:</h3>
+<ul>
+<li><strong>Who:</strong> Người quan tâm đến iPhone 18 nói riêng và các sản phẩm điện thoại mới của Apple nói chung; người đang dùng iPhone 16/17 muốn cân nhắc nâng cấp; tín đồ Apple, tech reviewer</li>
+<li><strong>What:</strong> Họ muốn xác định chính xác <strong>các mốc ngày ra mắt của từng phiên bản iPhone 18</strong> (do năm 2026 Apple ra mắt theo "split-launch", chia làm 2 đợt - khác hoàn toàn các năm trước)</li>
+<li><strong>Why:</strong> Họ muốn xác nhận chính xác thời điểm để có kế hoạch đặt mua, tham khảo giá cả, lựa chọn phiên bản phù hợp; cần biết iPhone 18 nào ra trước, iPhone 18 nào ra sau để không "lỡ tàu"</li>
+</ul>
+<hr />
+<h3 id="iphone-18-khi-nao-ra-mat-thang-92026-propro-max-iphone-fold-mua-xuan-2027-ban-tieu-chuan-18e-air-2"><strong>iPhone 18 khi nào ra mắt? Tháng 9/2026 (Pro/Pro Max &amp; iPhone Fold) - Mùa xuân 2027 (bản tiêu chuẩn, 18e, Air 2)</strong></h3>
+<hr />
+<h3 id="1-chinh-thuc-apple-chia-iphone-18-series-ra-mat-lam-2-ot-thang-92026-va-mua-xuan-2027">1. Chính thức: Apple chia iPhone 18 Series ra mắt làm 2 đợt - Tháng 9/2026 và Mùa xuân 2027</h3>
+<ul>
+<li>Người viết nêu được: Khác với truyền thống ra mắt toàn bộ dòng iPhone vào tháng 9 hằng năm, <strong>năm 2026 Apple áp dụng chiến lược "split-launch annual cycle"</strong> - chia dòng iPhone 18 thành 2 đợt ra mắt khác nhau (theo MacRumors 07/05/2026).</li>
+<li>Trình bày các phiên bản dạng bullet, mỗi phiên bản nêu được đặc trưng nổi bật + phù hợp với ai:</li>
+</ul>
+<p><strong>ĐỢT 1: Tháng 9/2026 (10 ngày đầu)</strong><br />
+- <strong>iPhone 18 Pro:</strong> Bản Pro 6.3 inch màn LTPO+, chip A20 Pro 2nm, camera variable aperture, 4 màu (Dark Cherry mới), giá khởi điểm dự kiến $1.099. Phù hợp cho: tín đồ nhiếp ảnh di động, người cần hiệu năng cao, doanh nhân.<br />
+- <strong>iPhone 18 Pro Max:</strong> Bản cao cấp nhất 6.9 inch, dày 8.8mm, nặng &gt;240g, pin 5.100-5.200 mAh (lớn nhất từ trước đến nay), giá $1.199. Phù hợp cho: người cần pin trâu, làm việc đa nhiệm, sáng tạo nội dung 4K/8K.<br />
+- <strong>iPhone Fold:</strong> Lần đầu tiên Apple có máy gập - màn ngoài 5.5"/màn trong 7.8", Touch ID tích hợp nút nguồn, pin 5.400-5.800 mAh, giá $1.800-$2.900. Phù hợp cho: người dùng cao cấp, fan công nghệ, doanh nhân muốn thiết bị 2-in-1.</p>
+<p><strong>ĐỢT 2: Mùa xuân 2027 (khoảng tháng 3)</strong><br />
+- <strong>iPhone 18 (tiêu chuẩn):</strong> 6.3 inch, chip A20, RAM 12GB, có thể bị "downgrade" nhẹ về panel màn hình so với 17. Phù hợp cho: người dùng phổ thông, sinh viên.<br />
+- <strong>iPhone 18e:</strong> Bản giá rẻ 6.1 inch, A20 (biến thể cắt giảm), camera đơn 48MP. Phù hợp cho: người mua iPhone lần đầu, sinh viên, học sinh.<br />
+- <strong>iPhone Air 2:</strong> Bản mỏng thế hệ 2, có thể có camera kép lần đầu, A20, 12GB RAM. Phù hợp cho: người yêu thiết kế mỏng nhẹ, dùng nhẹ nhàng.</p>
+<ul>
+<li><strong>Thời gian mở bán quốc tế</strong> sau khi ra mắt: tham khảo bản tiền nhiệm iPhone 17 (mở bán sau 9-10 ngày kể từ keynote), dự kiến iPhone 18 Pro/Pro Max &amp; iPhone Fold sẽ mở bán quốc tế khoảng <strong>giữa tháng 9/2026</strong> (sau ~7-10 ngày kể từ sự kiện).</li>
+</ul>
+<h3 id="2-nguyen-nhan-iphone-18-ra-mat-theo-lich-kep-split-launch-khac-biet-voi-iphone-17">2. Nguyên nhân iPhone 18 ra mắt theo lịch "kép" (split launch) - khác biệt với iPhone 17</h3>
+<ul>
+<li>So với phiên bản tiền nhiệm iPhone 17 (ra mắt đồng loạt tháng 9/2025), iPhone 18 ra theo lịch kép. Người viết cần phân tích các nguyên nhân chính:</li>
+<li><strong>Nguyên nhân 1: Áp lực chuỗi cung ứng A20 chip 2nm</strong> - Quy trình 2nm của TSMC còn mới, sản lượng hạn chế, chi phí cao hơn 50% so với 3nm. Apple ưu tiên cấp A20 Pro cho dòng cao cấp trước (theo MacRumors).</li>
+<li><strong>Nguyên nhân 2: Tránh "ăn thịt" doanh số iPhone Fold mới</strong> - iPhone Fold là sản phẩm chiến lược của 2026, Apple muốn tập trung chú ý vào Fold + Pro/Pro Max trong sự kiện tháng 9.</li>
+<li><strong>Nguyên nhân 3: Tối ưu lịch ra mắt với mùa mua sắm Tết và lễ tình nhân</strong> - đợt 2 ra vào mùa xuân 2027 trùng với mùa mua sắm tại nhiều thị trường châu Á.</li>
+<li><strong>Nguyên nhân 4: Cân bằng tài chính &amp; nguồn lực R&amp;D</strong> - Apple cần thời gian hoàn thiện các phiên bản giá rẻ hơn (18e, 18 tiêu chuẩn) để phối ăn khớp với chiến lược giá.</li>
+<li>Chọn 3 đoạn ngắn gọn, mỗi đoạn tối đa 5 dòng, viết cô đọng dựa trên các nội dung này.</li>
+</ul>
+<h3 id="3-iphone-18-khi-nao-ra-mat-tai-viet-nam">3. iPhone 18 khi nào ra mắt tại Việt Nam?</h3>
+<ul>
+<li><strong>Đối với iPhone 18 Series xách tay về Việt Nam:</strong> Sau khi bản quốc tế mở bán (giữa tháng 9/2026 cho Pro/Pro Max), hàng xách tay sẽ về Việt Nam <strong>ngay trong ngày hoặc muộn nhất sau 1-2 ngày</strong>. Cụ thể: iPhone 18 Pro/Pro Max xách tay dự kiến có mặt tại VN từ <strong>khoảng 20-22/9/2026</strong>.</li>
+<li><strong>Đối với iPhone 18 Series chính hãng (VN/A):</strong> Theo lịch trình các năm trước (iPhone 15, iPhone 16, iPhone 17), bản chính hãng thường về Việt Nam <strong>muộn hơn ngày ra mắt khoảng 1-1.5 tháng</strong>. Trường hợp khan hiếm (đặc biệt iPhone 18 Pro Max màu Dark Cherry), thời gian có thể kéo dài 1.5-2 tháng → <strong>dự kiến iPhone 18 Pro/Pro Max chính hãng về VN khoảng cuối tháng 10 - đầu tháng 11/2026</strong>.</li>
+<li><strong>iPhone Fold tại VN:</strong> Do giá cao ($2.000+) và sản lượng hạn chế, dự kiến hàng xách tay về VN sau 1-2 tuần kể từ ngày mở bán quốc tế; bản chính hãng có thể đến muộn hơn 2-3 tháng.</li>
+<li><strong>iPhone 18 tiêu chuẩn / 18e / Air 2 tại VN:</strong> Vì đợt 2 ra vào mùa xuân 2027, dự kiến hàng xách tay về VN cuối tháng 3 - đầu tháng 4/2027; chính hãng vào khoảng tháng 5/2027.</li>
+<li>Khuyến khích người đọc đăng ký nhận thông tin về ngày mở bán tại Viettel Store để không bỏ lỡ thông tin.</li>
+</ul>
+<h3 id="4-x-cai-tien-moi-toanh-gay-sot-cua-iphone-18">4. X cải tiến mới toanh - "gây sốt" của iPhone 18</h3>
+<ul>
+<li>Dẫn 1-2 dòng: nêu được đây là những cải tiến hoàn toàn mới, chưa từng xuất hiện ở dòng tiền nhiệm iPhone 17.</li>
+<li>Mỗi cải tiến bên dưới người viết nêu được:</li>
+<li>Nội dung của cải tiến này là gì</li>
+<li>Tác dụng đối với người dùng</li>
+</ul>
+<h4 id="41-lan-au-tien-co-iphone-gap-iphone-fold-mo-ra-ky-nguyen-moi">4.1. Lần đầu tiên có iPhone gập - iPhone Fold mở ra kỷ nguyên mới</h4>
+<ul>
+<li>Apple cuối cùng đã ra mắt iPhone gập sau nhiều năm chờ đợi - màn trong 7.76 inch, vết gập gần như vô hình</li>
+<li>Tác dụng: trải nghiệm "2-in-1" - vừa là điện thoại, vừa là tablet mini cho công việc và giải trí</li>
+</ul>
+<h4 id="42-khau-o-bien-thien-variable-aperture-lan-au-tren-iphone">4.2. Khẩu độ biến thiên (Variable Aperture) - lần đầu trên iPhone</h4>
+<ul>
+<li>Camera chính 48MP của iPhone 18 Pro/Pro Max có khả năng tự điều chỉnh khẩu độ</li>
+<li>Tác dụng: chụp đêm tốt hơn (mở khẩu lớn để thu nhiều ánh sáng), kiểm soát depth-of-field linh hoạt cho ảnh chân dung chuyên nghiệp</li>
+</ul>
+<h4 id="43-chip-a20-pro-buoc-nhay-2nm-au-tien-cua-apple">4.3. Chip A20 Pro - bước nhảy 2nm đầu tiên của Apple</h4>
+<ul>
+<li>Chip A20 Pro sử dụng quy trình 2nm của TSMC, nhanh hơn 15% và tiết kiệm 30% so với A19 Pro</li>
+<li>Tác dụng: hiệu năng đỉnh cao cho gaming, AI; pin dùng được lâu hơn (có thể đến 2 ngày trên Pro Max)</li>
+</ul>
+<h4 id="44-dynamic-island-thu-nho-35">4.4. Dynamic Island thu nhỏ 35%</h4>
+<ul>
+<li>Đèn flood illuminator của Face ID được đưa xuống dưới màn, khiến Dynamic Island chỉ rộng ~13.5mm (so với 20.7mm hiện tại)</li>
+<li>Tác dụng: giải phóng thêm diện tích hiển thị ở cạnh trên, trải nghiệm xem video/lướt web "tràn viền" hơn</li>
+</ul>
+<h4 id="45-man-ltpo-the-he-moi">4.5. Màn LTPO+ thế hệ mới</h4>
+<ul>
+<li>Công nghệ màn hình nâng cấp do Samsung &amp; LG sản xuất, hiệu quả hơn LTPO hiện tại</li>
+<li>Tác dụng: tiết kiệm pin tốt hơn, tốc độ refresh linh hoạt hơn, độ sáng cao hơn</li>
+</ul>
+<h4 id="46-5g-qua-ve-tinh-nr-ntn">4.6. 5G qua vệ tinh (NR-NTN)</h4>
+<ul>
+<li>Lần đầu tiên hỗ trợ kết nối Internet qua vệ tinh - không cần Wi-Fi hay sóng di động</li>
+<li>Tác dụng: lướt web, gửi tin nhắn ở mọi nơi - kể cả vùng núi, biển khơi không có sóng</li>
+</ul>
+<h4 id="47-modem-c2-the-he-3-modem-tu-thiet-ke">4.7. Modem C2 - thế hệ 3 modem tự thiết kế</h4>
+<ul>
+<li>C2 modem kế thừa C1X, hỗ trợ mmWave 5G đầy đủ</li>
+<li>Tác dụng: tốc độ mạng nhanh hơn, tiết kiệm pin nhờ tích hợp sâu với chip A20</li>
+</ul>
+<h4 id="48-mau-dark-cherry-mau-ac-trung-nam-2026">4.8. Màu Dark Cherry - màu đặc trưng năm 2026</h4>
+<ul>
+<li>Phiên bản Pro &amp; Pro Max có màu Dark Cherry hoàn toàn mới (đỏ sẫm pha tím)</li>
+<li>Tác dụng: ngôn ngữ thiết kế đẳng cấp, sang trọng - thay thế cho màu Natural Titanium đã quen thuộc</li>
+</ul>
+<h4 id="49-ram-12gb-ong-nhat-toan-dong">4.9. RAM 12GB đồng nhất toàn dòng</h4>
+<ul>
+<li>Lần đầu tiên cả 4 phiên bản (kể cả bản tiêu chuẩn và 18e) đều có 12GB RAM</li>
+<li>Tác dụng: chạy mượt mọi tính năng Apple Intelligence, đa nhiệm tốt hơn</li>
+</ul>
+<h4 id="410-camera-selfie-24mp-nang-cap-lon">4.10. Camera selfie 24MP - nâng cấp lớn</h4>
+<ul>
+<li>Camera trước tăng từ 18MP (iPhone 17) lên 24MP trên toàn dòng iPhone 18</li>
+<li>Tác dụng: selfie sắc nét hơn, video call chất lượng cao hơn, làm content TikTok/Reels chuyên nghiệp hơn</li>
+</ul>
+<h3 id="5-gia-ban-cua-iphone-18-khi-ra-mat-la-bao-nhieu">5. Giá bán của iPhone 18 khi ra mắt là bao nhiêu?</h3>
+<ul>
+<li>Dẫn dắt và viết ngắn gọn giá của các phiên bản (vì đây là nội dung phụ):</li>
+<li><strong>iPhone 18 (tiêu chuẩn):</strong> Khoảng $799 (~20-22 triệu đồng tại VN) - dự kiến giữ giá iPhone 17</li>
+<li><strong>iPhone 18e:</strong> Khoảng $599-$699 (~16-19 triệu đồng tại VN)</li>
+<li><strong>iPhone 18 Pro:</strong> Khoảng $1.099 (~28-30 triệu đồng tại VN)</li>
+<li><strong>iPhone 18 Pro Max:</strong> Khoảng $1.199 (~31-33 triệu đồng tại VN)</li>
+<li><strong>iPhone Air 2:</strong> Khoảng $999 (~26-28 triệu đồng tại VN)</li>
+<li><strong>iPhone Fold:</strong> $1.800-$2.900 (~47-75 triệu đồng tại VN) - tùy dung lượng</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>CẬP NHẬT:</strong> File này được cập nhật định kỳ hàng ngày. Lần cập nhật gần nhất: 09/05/2026.</p>
+</blockquote>
+</div>
+
+<div class="save-status" id="saveStatus">✓</div>
+
+<script>
+// ============== EDIT MODE ==============
+let editMode = false;
+const STORAGE_KEY = 'iphone18_html_edits_v4';
+
+document.addEventListener('DOMContentLoaded', () => {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      document.getElementById('content').innerHTML = saved;
+      showStatus('✓ Khôi phục bản chỉnh sửa (gõ resetToOriginal() trong Console để xoá)');
+    }
+  } catch (e) { console.warn(e); }
+
+  // Set up search keyboard handlers
+  const input = document.getElementById('searchInput');
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); runSearch(); }
+    if (e.key === 'Escape') { clearSearch(); }
+  });
+  // Debounced live-search after 400ms of inactivity (>=2 chars)
+  let debounceTimer;
+  input.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      const q = input.value.trim();
+      if (q.length >= 2) runSearch(); else clearSearch();
+    }, 400);
+  });
+});
+
+function toggleEdit() {
+  editMode = !editMode;
+  const body = document.body;
+  const btnEdit = document.getElementById('btnEdit');
+  const btnSave = document.getElementById('btnSave');
+  const content = document.getElementById('content');
+  if (editMode) {
+    body.classList.add('editing');
+    btnEdit.textContent = '❌ Thoát chỉnh sửa';
+    btnEdit.classList.add('active');
+    btnSave.style.display = 'inline-flex';
+    content.querySelectorAll('td, p, li, h1, h2, h3, h4, blockquote').forEach(el => {
+      el.contentEditable = 'true';
+    });
+    showStatus('✏️ Chế độ chỉnh sửa BẬT');
+  } else {
+    body.classList.remove('editing');
+    btnEdit.textContent = '✏️ Chỉnh sửa';
+    btnEdit.classList.remove('active');
+    btnSave.style.display = 'none';
+    content.querySelectorAll('[contenteditable]').forEach(el => {
+      el.contentEditable = 'false';
+    });
+    saveChanges(true);
+  }
+}
+
+function saveChanges(silent) {
+  try {
+    const html = document.getElementById('content').innerHTML;
+    localStorage.setItem(STORAGE_KEY, html);
+    if (!silent) showStatus('✓ Đã lưu vào trình duyệt');
+    else showStatus('✓ Tự động lưu');
+  } catch (e) {
+    showStatus('⚠ Lỗi lưu: ' + e.message, true);
+  }
+}
+
+let statusTimer;
+function showStatus(text, isError) {
+  const el = document.getElementById('saveStatus');
+  el.textContent = text;
+  el.classList.toggle('error', !!isError);
+  el.classList.add('show');
+  clearTimeout(statusTimer);
+  statusTimer = setTimeout(() => el.classList.remove('show'), 3000);
+}
+
+setInterval(() => { if (editMode) saveChanges(true); }, 30000);
+
+// ============== SEARCH ==============
+// Vietnamese diacritic-insensitive match. Removes combining marks and converts đ -> d.
+function normalize(str) {
+  return (str || '')
+    .toString()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/đ/g, 'd')
+    .replace(/Đ/g, 'd');
+}
+
+function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+function highlight(html, queryNorm) {
+  if (!queryNorm) return html;
+  // We need to find matches in the normalized version while highlighting in the original.
+  // Approach: walk the text token by token using a sliding window.
+  const original = html;
+  const norm = normalize(html.replace(/<[^>]+>/g, ''));
+  // Find positions in norm where query occurs
+  const positions = [];
+  let idx = 0;
+  while ((idx = norm.indexOf(queryNorm, idx)) !== -1) {
+    positions.push(idx);
+    idx += queryNorm.length;
+  }
+  if (positions.length === 0) return html;
+
+  // Map char positions in stripped text back to original HTML with tags.
+  // Build an index of (htmlIndex -> stripIndex).
+  const map = [];
+  let inTag = false;
+  for (let i = 0; i < original.length; i++) {
+    const ch = original[i];
+    if (ch === '<') { inTag = true; continue; }
+    if (ch === '>') { inTag = false; continue; }
+    if (!inTag) map.push(i);
+  }
+  // Reconstruct: insert <mark> ... </mark> around each match
+  const inserts = [];
+  for (const p of positions) {
+    if (p >= map.length) continue;
+    const startHtml = map[p];
+    const endHtml = map[Math.min(p + queryNorm.length - 1, map.length - 1)] + 1;
+    inserts.push({pos: startHtml, str: '<mark class="search-hit">'});
+    inserts.push({pos: endHtml, str: '</mark>'});
+  }
+  // Apply inserts back to front so positions stay valid
+  inserts.sort((a, b) => b.pos - a.pos || (a.str.startsWith('</') ? -1 : 1));
+  let out = original;
+  for (const ins of inserts) {
+    out = out.slice(0, ins.pos) + ins.str + out.slice(ins.pos);
+  }
+  return out;
+}
+
+function extractExcerpt(text, queryNorm, windowSize) {
+  const normT = normalize(text);
+  const i = normT.indexOf(queryNorm);
+  if (i === -1) return text.slice(0, 240);
+  const start = Math.max(0, i - windowSize);
+  const end = Math.min(text.length, i + queryNorm.length + windowSize);
+  let excerpt = text.slice(start, end);
+  if (start > 0) excerpt = '…' + excerpt;
+  if (end < text.length) excerpt += '…';
+  return excerpt;
+}
+
+function escapeHtml(s) {
+  return (s || '').toString()
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function runSearch() {
+  const input = document.getElementById('searchInput');
+  const raw = input.value.trim();
+  const panel = document.getElementById('searchResults');
+  const body = document.getElementById('searchResultsBody');
+  const btnClear = document.getElementById('btnClear');
+
+  if (raw.length === 0) { clearSearch(); return; }
+  btnClear.style.display = 'inline-flex';
+
+  document.getElementById('searchQueryDisplay').innerHTML =
+    '"<strong style="color:#1d1d1f">' + escapeHtml(raw) + '</strong>"';
+
+  const queryNorm = normalize(raw);
+
+  // Find the Tổng hợp table - first <table> after the H2 with id "i-tong-hop-thong-tin"
+  const h2 = document.querySelector('#content h2[id^="i-tong-hop"]') ||
+             document.querySelector('#content h2');
+  let table = null;
+  if (h2) {
+    let cur = h2.nextElementSibling;
+    while (cur) {
+      if (cur.tagName === 'TABLE') { table = cur; break; }
+      if (cur.tagName === 'H2') break;
+      const inner = cur.querySelector && cur.querySelector('table');
+      if (inner) { table = inner; break; }
+      cur = cur.nextElementSibling;
+    }
+  }
+  if (!table) {
+    body.innerHTML = '<div class="no-results">Không tìm thấy bảng tổng hợp.</div>';
+    document.getElementById('searchCount').textContent = '0';
+    panel.classList.add('show');
+    return;
+  }
+
+  // Get header to know column order. Assume order:
+  // STT | Tên nguồn | Link nguồn | Nội dung tóm tắt | Ngày cập nhật
+  const headerCells = table.querySelectorAll('thead th, tr:first-child th');
+  const colMap = {};
+  headerCells.forEach((th, idx) => {
+    const t = normalize(th.textContent);
+    if (t.includes('stt')) colMap.stt = idx;
+    else if (t.includes('ten nguon') || t.includes('nguon') && colMap.name===undefined) colMap.name = idx;
+    else if (t.includes('link')) colMap.link = idx;
+    else if (t.includes('noi dung') || t.includes('tom tat')) colMap.content = idx;
+    else if (t.includes('ngay') || t.includes('cap nhat')) colMap.date = idx;
+  });
+  // Defaults if header parse failed (5-col format)
+  if (colMap.name === undefined) colMap.name = 1;
+  if (colMap.link === undefined) colMap.link = 2;
+  if (colMap.content === undefined) colMap.content = 3;
+  if (colMap.date === undefined) colMap.date = 4;
+
+  const rows = table.querySelectorAll('tbody tr, tr');
+  const matches = [];
+  rows.forEach((row, i) => {
+    // Skip header row
+    if (row.querySelectorAll('th').length > 0 && row.querySelectorAll('td').length === 0) return;
+    const cells = row.querySelectorAll('td, th');
+    if (cells.length < 3) return;
+    const allText = Array.from(cells).map(c => c.textContent).join(' ');
+    if (normalize(allText).includes(queryNorm)) {
+      matches.push({row, cells, allText});
+    }
+  });
+
+  document.getElementById('searchCount').textContent = matches.length + ' kết quả';
+
+  // Show suggestions of related terms
+  const suggestions = ['màu', 'pin', 'camera', 'chip A20', 'Dynamic Island', 'iPhone Fold', 'giá', 'ra mắt', 'Ternus', 'variable aperture'];
+  document.getElementById('searchInfo').innerHTML =
+    'Gợi ý: ' + suggestions.map(s =>
+      `<span class="search-tag" onclick="document.getElementById('searchInput').value='${s}';runSearch()">${s}</span>`
+    ).join('');
+
+  if (matches.length === 0) {
+    body.innerHTML = '<div class="no-results">Không tìm thấy bài viết nào chứa "<strong>' + escapeHtml(raw) + '</strong>". Thử từ khoá khác.</div>';
+  } else {
+    let html = '<table class="results-table"><thead><tr>' +
+      '<th class="col-link">Link nguồn</th>' +
+      '<th class="col-content">Nội dung liên quan đến "' + escapeHtml(raw) + '"</th>' +
+      '<th class="col-date">Ngày cập nhật</th>' +
+      '</tr></thead><tbody>';
+    for (const m of matches) {
+      const nameCell = m.cells[colMap.name];
+      const linkCell = m.cells[colMap.link];
+      const contentCell = m.cells[colMap.content];
+      const dateCell = m.cells[colMap.date];
+
+      const sourceName = nameCell ? nameCell.textContent.trim() : '';
+      const rawLink = linkCell ? linkCell.textContent.trim() : '';
+      // Build proper anchor(s) - link cell may contain multiple URLs (whitespace-separated)
+      const linkHtml = rawLink.split(/\s+/).filter(u => /^https?:/.test(u))
+        .map(u => `<a href="${u}" target="_blank" rel="noopener">${u}</a>`)
+        .join('<br>') || escapeHtml(rawLink);
+
+      const contentText = contentCell ? contentCell.textContent.trim() : '';
+      const excerpt = extractExcerpt(contentText, queryNorm, 120);
+      const excerptHl = highlight(escapeHtml(excerpt), queryNorm);
+
+      const dateText = dateCell ? dateCell.textContent.trim() : '';
+
+      html += '<tr>' +
+        '<td><div style="font-weight:600;margin-bottom:4px;">' + escapeHtml(sourceName) + '</div>' + linkHtml + '</td>' +
+        '<td>' + excerptHl + '</td>' +
+        '<td>' + escapeHtml(dateText) + '</td>' +
+        '</tr>';
+    }
+    html += '</tbody></table>';
+    body.innerHTML = html;
+  }
+
+  panel.classList.add('show');
+  // Scroll panel into view
+  panel.scrollIntoView({behavior: 'smooth', block: 'start'});
+}
+
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('btnClear').style.display = 'none';
+  document.getElementById('searchResults').classList.remove('show');
+}
+
+window.resetToOriginal = function() {
+  if (confirm('Xoá toàn bộ chỉnh sửa và quay về bản gốc?')) {
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  }
+};
+console.log('💡 Tip: gõ resetToOriginal() trong Console để khôi phục bản gốc');
+</script>
+
+</body>
+</html>
